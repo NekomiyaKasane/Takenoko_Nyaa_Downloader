@@ -133,9 +133,10 @@ def handle_table(trs, prefix, item_filter):
 
 def main(argv=None):
     docs = []
-    for i in range(1):
+    for i in range(300):
         print('\033[1;33mPage {0}:\033[0m'.format(i + 1))
         try:
+            time.sleep(2)
             doc = get_html(Domain + '/?p={0}'.format(i + 1))
             if not doc:
                 print("Failed to fetch {0}th page.".format(i + 1))

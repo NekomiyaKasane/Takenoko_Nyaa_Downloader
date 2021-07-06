@@ -336,6 +336,66 @@
 		<tbody>
 			<tr class="default">
 				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1405905" title="Shadows House - 13 VOSTFR.ass">Shadows House - 13 VOSTFR.ass</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1405905.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:be01b2742b96f771b1e6436bcf753e2ea7a04454&amp;dn=Shadows%20House%20-%2013%20VOSTFR.ass&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">22.2 KiB</td>
+				<td class="text-center" data-timestamp="1625475682">2021-07-05 09:01</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">1</td>
+				<td class="text-center">1</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1405903" title="[Moozzi2] Tatoeba Last Dungeon Mae no Mura no Shounen ga Joban no Machi de Kurasu You na Monogatari (BD 1920x1080 x265-10Bit FLACx2) - TV + SP">[Moozzi2] Tatoeba Last Dungeon Mae no Mura no Shounen ga Joban no Machi de Kurasu You na Monogatari (BD 1920x1080 x265-10Bit FLACx2) - TV + SP</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1405903.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:7e733b7661258b65ac48c0490b291a3209bd24e6&amp;dn=%5BMoozzi2%5D%20Tatoeba%20Last%20Dungeon%20Mae%20no%20Mura%20no%20Shounen%20ga%20Joban%20no%20Machi%20de%20Kurasu%20You%20na%20Monogatari%20%28BD%201920x1080%20x265-10Bit%20FLACx2%29%20-%20TV%20%2B%20SP&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">10.1 GiB</td>
+				<td class="text-center" data-timestamp="1625474827">2021-07-05 08:47</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">37</td>
+				<td class="text-center">0</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1405902" title="[Moozzi2] Non Non Biyori Nonstop (BD 1920x1080 x265-10Bit FLACx2) - TV + SP">[Moozzi2] Non Non Biyori Nonstop (BD 1920x1080 x265-10Bit FLACx2) - TV + SP</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1405902.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:91badb1da3c2a8e3b23c7d5f5ea7aaadd77946f6&amp;dn=%5BMoozzi2%5D%20Non%20Non%20Biyori%20Nonstop%20%28BD%201920x1080%20x265-10Bit%20FLACx2%29%20-%20TV%20%2B%20SP&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">10.8 GiB</td>
+				<td class="text-center" data-timestamp="1625474800">2021-07-05 08:46</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">49</td>
+				<td class="text-center">0</td>
+			</tr>
+			<tr class="default">
+				<td>
 					<a href="/?c=3_3" title="Literature - Raw">
 						<img src="/static/img/icons/nyaa/3_3.png" alt="Literature - Raw" class="category-icon"/>
 					</a>
@@ -350,9 +410,9 @@
 				<td class="text-center">33.3 MiB</td>
 				<td class="text-center" data-timestamp="1625471630">2021-07-05 07:53</td>
 
-				<td class="text-center">75</td>
-				<td class="text-center">30</td>
-				<td class="text-center">74</td>
+				<td class="text-center">186</td>
+				<td class="text-center">45</td>
+				<td class="text-center">231</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -370,9 +430,9 @@
 				<td class="text-center">335.6 MiB</td>
 				<td class="text-center" data-timestamp="1625471193">2021-07-05 07:46</td>
 
-				<td class="text-center">1</td>
-				<td class="text-center">14</td>
-				<td class="text-center">1</td>
+				<td class="text-center">11</td>
+				<td class="text-center">2</td>
+				<td class="text-center">6</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -391,8 +451,8 @@
 				<td class="text-center" data-timestamp="1625470761">2021-07-05 07:39</td>
 
 				<td class="text-center">3</td>
+				<td class="text-center">0</td>
 				<td class="text-center">6</td>
-				<td class="text-center">3</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -410,9 +470,9 @@
 				<td class="text-center">139.9 MiB</td>
 				<td class="text-center" data-timestamp="1625470732">2021-07-05 07:38</td>
 
-				<td class="text-center">2</td>
+				<td class="text-center">1</td>
 				<td class="text-center">3</td>
-				<td class="text-center">2</td>
+				<td class="text-center">3</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -430,9 +490,9 @@
 				<td class="text-center">1.2 GiB</td>
 				<td class="text-center" data-timestamp="1625469077">2021-07-05 07:11</td>
 
-				<td class="text-center">9</td>
-				<td class="text-center">43</td>
-				<td class="text-center">2</td>
+				<td class="text-center">30</td>
+				<td class="text-center">20</td>
+				<td class="text-center">16</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -450,9 +510,9 @@
 				<td class="text-center">334.4 MiB</td>
 				<td class="text-center" data-timestamp="1625468552">2021-07-05 07:02</td>
 
-				<td class="text-center">24</td>
-				<td class="text-center">13</td>
-				<td class="text-center">18</td>
+				<td class="text-center">28</td>
+				<td class="text-center">9</td>
+				<td class="text-center">27</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -472,7 +532,7 @@
 
 				<td class="text-center">17</td>
 				<td class="text-center">7</td>
-				<td class="text-center">16</td>
+				<td class="text-center">18</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -490,9 +550,9 @@
 				<td class="text-center">668.3 MiB</td>
 				<td class="text-center" data-timestamp="1625467330">2021-07-05 06:42</td>
 
+				<td class="text-center">16</td>
 				<td class="text-center">15</td>
-				<td class="text-center">10</td>
-				<td class="text-center">11</td>
+				<td class="text-center">17</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -510,9 +570,9 @@
 				<td class="text-center">192.9 MiB</td>
 				<td class="text-center" data-timestamp="1625466666">2021-07-05 06:31</td>
 
-				<td class="text-center">12</td>
-				<td class="text-center">27</td>
-				<td class="text-center">8</td>
+				<td class="text-center">11</td>
+				<td class="text-center">18</td>
+				<td class="text-center">10</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -530,9 +590,9 @@
 				<td class="text-center">192.9 MiB</td>
 				<td class="text-center" data-timestamp="1625466629">2021-07-05 06:30</td>
 
-				<td class="text-center">4</td>
-				<td class="text-center">13</td>
-				<td class="text-center">5</td>
+				<td class="text-center">2</td>
+				<td class="text-center">9</td>
+				<td class="text-center">7</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -550,9 +610,9 @@
 				<td class="text-center">56.7 MiB</td>
 				<td class="text-center" data-timestamp="1625466570">2021-07-05 06:29</td>
 
-				<td class="text-center">146</td>
+				<td class="text-center">204</td>
 				<td class="text-center">47</td>
-				<td class="text-center">230</td>
+				<td class="text-center">369</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -570,9 +630,9 @@
 				<td class="text-center">8.0 GiB</td>
 				<td class="text-center" data-timestamp="1625466361">2021-07-05 06:26</td>
 
+				<td class="text-center">21</td>
 				<td class="text-center">16</td>
-				<td class="text-center">20</td>
-				<td class="text-center">18</td>
+				<td class="text-center">21</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -590,9 +650,9 @@
 				<td class="text-center">677.7 MiB</td>
 				<td class="text-center" data-timestamp="1625466087">2021-07-05 06:21</td>
 
-				<td class="text-center">18</td>
-				<td class="text-center">6</td>
-				<td class="text-center">17</td>
+				<td class="text-center">16</td>
+				<td class="text-center">9</td>
+				<td class="text-center">22</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -610,9 +670,9 @@
 				<td class="text-center">662.4 MiB</td>
 				<td class="text-center" data-timestamp="1625465545">2021-07-05 06:12</td>
 
-				<td class="text-center">37</td>
-				<td class="text-center">10</td>
-				<td class="text-center">53</td>
+				<td class="text-center">33</td>
+				<td class="text-center">12</td>
+				<td class="text-center">59</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -630,8 +690,8 @@
 				<td class="text-center">18.1 GiB</td>
 				<td class="text-center" data-timestamp="1625465423">2021-07-05 06:10</td>
 
-				<td class="text-center">0</td>
-				<td class="text-center">3</td>
+				<td class="text-center">1</td>
+				<td class="text-center">1</td>
 				<td class="text-center">0</td>
 			</tr>
 			<tr class="default">
@@ -650,8 +710,8 @@
 				<td class="text-center">312.6 MiB</td>
 				<td class="text-center" data-timestamp="1625465003">2021-07-05 06:03</td>
 
-				<td class="text-center">8</td>
-				<td class="text-center">2</td>
+				<td class="text-center">7</td>
+				<td class="text-center">0</td>
 				<td class="text-center">3</td>
 			</tr>
 			<tr class="default">
@@ -670,8 +730,8 @@
 				<td class="text-center">576.2 MiB</td>
 				<td class="text-center" data-timestamp="1625464877">2021-07-05 06:01</td>
 
-				<td class="text-center">26</td>
-				<td class="text-center">2</td>
+				<td class="text-center">23</td>
+				<td class="text-center">1</td>
 				<td class="text-center">23</td>
 			</tr>
 			<tr class="success">
@@ -690,9 +750,9 @@
 				<td class="text-center">315.9 MiB</td>
 				<td class="text-center" data-timestamp="1625464618">2021-07-05 05:56</td>
 
-				<td class="text-center">30</td>
-				<td class="text-center">7</td>
-				<td class="text-center">33</td>
+				<td class="text-center">36</td>
+				<td class="text-center">12</td>
+				<td class="text-center">38</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -710,8 +770,8 @@
 				<td class="text-center">8.0 GiB</td>
 				<td class="text-center" data-timestamp="1625464429">2021-07-05 05:53</td>
 
-				<td class="text-center">1</td>
-				<td class="text-center">30</td>
+				<td class="text-center">4</td>
+				<td class="text-center">37</td>
 				<td class="text-center">0</td>
 			</tr>
 			<tr class="default">
@@ -731,7 +791,7 @@
 				<td class="text-center" data-timestamp="1625464413">2021-07-05 05:53</td>
 
 				<td class="text-center">0</td>
-				<td class="text-center">14</td>
+				<td class="text-center">19</td>
 				<td class="text-center">0</td>
 			</tr>
 			<tr class="default">
@@ -751,7 +811,7 @@
 				<td class="text-center" data-timestamp="1625464394">2021-07-05 05:53</td>
 
 				<td class="text-center">1</td>
-				<td class="text-center">31</td>
+				<td class="text-center">33</td>
 				<td class="text-center">0</td>
 			</tr>
 			<tr class="default">
@@ -771,8 +831,8 @@
 				<td class="text-center" data-timestamp="1625464359">2021-07-05 05:52</td>
 
 				<td class="text-center">0</td>
-				<td class="text-center">7</td>
-				<td class="text-center">0</td>
+				<td class="text-center">11</td>
+				<td class="text-center">1</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -790,8 +850,8 @@
 				<td class="text-center">1.8 GiB</td>
 				<td class="text-center" data-timestamp="1625464344">2021-07-05 05:52</td>
 
-				<td class="text-center">2</td>
-				<td class="text-center">124</td>
+				<td class="text-center">5</td>
+				<td class="text-center">155</td>
 				<td class="text-center">0</td>
 			</tr>
 			<tr class="default">
@@ -812,9 +872,9 @@
 				<td class="text-center">557.3 MiB</td>
 				<td class="text-center" data-timestamp="1625463524">2021-07-05 05:38</td>
 
-				<td class="text-center">14</td>
-				<td class="text-center">1</td>
-				<td class="text-center">16</td>
+				<td class="text-center">13</td>
+				<td class="text-center">3</td>
+				<td class="text-center">19</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -832,8 +892,8 @@
 				<td class="text-center">1.0 GiB</td>
 				<td class="text-center" data-timestamp="1625463418">2021-07-05 05:36</td>
 
-				<td class="text-center">2</td>
-				<td class="text-center">1</td>
+				<td class="text-center">3</td>
+				<td class="text-center">3</td>
 				<td class="text-center">5</td>
 			</tr>
 			<tr class="default">
@@ -843,6 +903,8 @@
 					</a>
 				</td>
 				<td colspan="2">
+					<a href="/view/1405876#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
 					<a href="/view/1405876" title="hololive -【UNARCHIVED】Let's Sing! [Watson Amelia Ch. hololive-EN] (agAgp82O7DE)">hololive -【UNARCHIVED】Let's Sing! [Watson Amelia Ch. hololive-EN] (agAgp82O7DE)</a>
 				</td>
 				<td class="text-center">
@@ -852,9 +914,9 @@
 				<td class="text-center">3.2 GiB</td>
 				<td class="text-center" data-timestamp="1625463392">2021-07-05 05:36</td>
 
-				<td class="text-center">18</td>
-				<td class="text-center">6</td>
-				<td class="text-center">20</td>
+				<td class="text-center">14</td>
+				<td class="text-center">8</td>
+				<td class="text-center">24</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -872,9 +934,9 @@
 				<td class="text-center">23.8 MiB</td>
 				<td class="text-center" data-timestamp="1625462333">2021-07-05 05:18</td>
 
-				<td class="text-center">29</td>
-				<td class="text-center">11</td>
-				<td class="text-center">74</td>
+				<td class="text-center">37</td>
+				<td class="text-center">8</td>
+				<td class="text-center">99</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -894,9 +956,9 @@
 				<td class="text-center">153.5 MiB</td>
 				<td class="text-center" data-timestamp="1625462089">2021-07-05 05:14</td>
 
-				<td class="text-center">24</td>
-				<td class="text-center">5</td>
-				<td class="text-center">39</td>
+				<td class="text-center">22</td>
+				<td class="text-center">7</td>
+				<td class="text-center">46</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -915,8 +977,8 @@
 				<td class="text-center" data-timestamp="1625462027">2021-07-05 05:13</td>
 
 				<td class="text-center">21</td>
-				<td class="text-center">4</td>
-				<td class="text-center">47</td>
+				<td class="text-center">7</td>
+				<td class="text-center">54</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -934,9 +996,9 @@
 				<td class="text-center">661.2 MiB</td>
 				<td class="text-center" data-timestamp="1625460153">2021-07-05 04:42</td>
 
-				<td class="text-center">20</td>
-				<td class="text-center">1</td>
-				<td class="text-center">27</td>
+				<td class="text-center">14</td>
+				<td class="text-center">2</td>
+				<td class="text-center">29</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -954,9 +1016,9 @@
 				<td class="text-center">49.2 MiB</td>
 				<td class="text-center" data-timestamp="1625458959">2021-07-05 04:22</td>
 
-				<td class="text-center">120</td>
-				<td class="text-center">27</td>
-				<td class="text-center">326</td>
+				<td class="text-center">160</td>
+				<td class="text-center">30</td>
+				<td class="text-center">432</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -974,9 +1036,9 @@
 				<td class="text-center">1.1 GiB</td>
 				<td class="text-center" data-timestamp="1625458304">2021-07-05 04:11</td>
 
-				<td class="text-center">18</td>
-				<td class="text-center">4</td>
-				<td class="text-center">18</td>
+				<td class="text-center">19</td>
+				<td class="text-center">9</td>
+				<td class="text-center">20</td>
 			</tr>
 			<tr class="success">
 				<td>
@@ -994,9 +1056,9 @@
 				<td class="text-center">808.6 MiB</td>
 				<td class="text-center" data-timestamp="1625458301">2021-07-05 04:11</td>
 
-				<td class="text-center">134</td>
-				<td class="text-center">20</td>
-				<td class="text-center">230</td>
+				<td class="text-center">133</td>
+				<td class="text-center">24</td>
+				<td class="text-center">248</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1015,7 +1077,7 @@
 				<td class="text-center" data-timestamp="1625457866">2021-07-05 04:04</td>
 
 				<td class="text-center">4</td>
-				<td class="text-center">1</td>
+				<td class="text-center">2</td>
 				<td class="text-center">6</td>
 			</tr>
 			<tr class="default">
@@ -1034,9 +1096,9 @@
 				<td class="text-center">277.6 MiB</td>
 				<td class="text-center" data-timestamp="1625457335">2021-07-05 03:55</td>
 
-				<td class="text-center">19</td>
+				<td class="text-center">20</td>
 				<td class="text-center">2</td>
-				<td class="text-center">28</td>
+				<td class="text-center">29</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1054,9 +1116,9 @@
 				<td class="text-center">326.5 MiB</td>
 				<td class="text-center" data-timestamp="1625456995">2021-07-05 03:49</td>
 
-				<td class="text-center">20</td>
-				<td class="text-center">7</td>
-				<td class="text-center">68</td>
+				<td class="text-center">23</td>
+				<td class="text-center">12</td>
+				<td class="text-center">78</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1074,9 +1136,9 @@
 				<td class="text-center">327.6 MiB</td>
 				<td class="text-center" data-timestamp="1625456974">2021-07-05 03:49</td>
 
-				<td class="text-center">11</td>
+				<td class="text-center">9</td>
 				<td class="text-center">6</td>
-				<td class="text-center">29</td>
+				<td class="text-center">30</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1094,9 +1156,9 @@
 				<td class="text-center">18.5 GiB</td>
 				<td class="text-center" data-timestamp="1625456853">2021-07-05 03:47</td>
 
-				<td class="text-center">20</td>
-				<td class="text-center">15</td>
 				<td class="text-center">21</td>
+				<td class="text-center">21</td>
+				<td class="text-center">22</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1114,9 +1176,9 @@
 				<td class="text-center">303.1 MiB</td>
 				<td class="text-center" data-timestamp="1625456571">2021-07-05 03:42</td>
 
-				<td class="text-center">14</td>
-				<td class="text-center">8</td>
-				<td class="text-center">25</td>
+				<td class="text-center">16</td>
+				<td class="text-center">6</td>
+				<td class="text-center">32</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1134,9 +1196,9 @@
 				<td class="text-center">303.2 MiB</td>
 				<td class="text-center" data-timestamp="1625456524">2021-07-05 03:42</td>
 
-				<td class="text-center">14</td>
-				<td class="text-center">7</td>
-				<td class="text-center">20</td>
+				<td class="text-center">15</td>
+				<td class="text-center">11</td>
+				<td class="text-center">23</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1154,9 +1216,9 @@
 				<td class="text-center">384.1 MiB</td>
 				<td class="text-center" data-timestamp="1625455689">2021-07-05 03:28</td>
 
-				<td class="text-center">16</td>
-				<td class="text-center">4</td>
-				<td class="text-center">23</td>
+				<td class="text-center">17</td>
+				<td class="text-center">5</td>
+				<td class="text-center">24</td>
 			</tr>
 			<tr class="success">
 				<td>
@@ -1176,9 +1238,9 @@
 				<td class="text-center">705.3 MiB</td>
 				<td class="text-center" data-timestamp="1625455001">2021-07-05 03:16</td>
 
-				<td class="text-center">25</td>
-				<td class="text-center">3</td>
-				<td class="text-center">57</td>
+				<td class="text-center">21</td>
+				<td class="text-center">4</td>
+				<td class="text-center">62</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1200,7 +1262,7 @@
 
 				<td class="text-center">38</td>
 				<td class="text-center">12</td>
-				<td class="text-center">56</td>
+				<td class="text-center">62</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1218,9 +1280,9 @@
 				<td class="text-center">20.8 MiB</td>
 				<td class="text-center" data-timestamp="1625454024">2021-07-05 03:00</td>
 
-				<td class="text-center">11</td>
+				<td class="text-center">8</td>
 				<td class="text-center">2</td>
-				<td class="text-center">33</td>
+				<td class="text-center">34</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1258,9 +1320,9 @@
 				<td class="text-center">351.6 MiB</td>
 				<td class="text-center" data-timestamp="1625451604">2021-07-05 02:20</td>
 
-				<td class="text-center">20</td>
-				<td class="text-center">6</td>
-				<td class="text-center">41</td>
+				<td class="text-center">25</td>
+				<td class="text-center">5</td>
+				<td class="text-center">48</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1280,9 +1342,9 @@
 				<td class="text-center">2.1 GiB</td>
 				<td class="text-center" data-timestamp="1625451154">2021-07-05 02:12</td>
 
-				<td class="text-center">19</td>
-				<td class="text-center">5</td>
-				<td class="text-center">50</td>
+				<td class="text-center">20</td>
+				<td class="text-center">8</td>
+				<td class="text-center">51</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1300,9 +1362,9 @@
 				<td class="text-center">1.0 GiB</td>
 				<td class="text-center" data-timestamp="1625451149">2021-07-05 02:12</td>
 
-				<td class="text-center">12</td>
-				<td class="text-center">3</td>
-				<td class="text-center">24</td>
+				<td class="text-center">13</td>
+				<td class="text-center">4</td>
+				<td class="text-center">27</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1320,7 +1382,7 @@
 				<td class="text-center">630.3 MiB</td>
 				<td class="text-center" data-timestamp="1625448992">2021-07-05 01:36</td>
 
-				<td class="text-center">5</td>
+				<td class="text-center">4</td>
 				<td class="text-center">0</td>
 				<td class="text-center">12</td>
 			</tr>
@@ -1360,9 +1422,9 @@
 				<td class="text-center">1.3 GiB</td>
 				<td class="text-center" data-timestamp="1625448277">2021-07-05 01:24</td>
 
-				<td class="text-center">54</td>
-				<td class="text-center">5</td>
-				<td class="text-center">93</td>
+				<td class="text-center">53</td>
+				<td class="text-center">12</td>
+				<td class="text-center">104</td>
 			</tr>
 			<tr class="success">
 				<td>
@@ -1382,9 +1444,9 @@
 				<td class="text-center">722.5 MiB</td>
 				<td class="text-center" data-timestamp="1625447185">2021-07-05 01:06</td>
 
-				<td class="text-center">23</td>
+				<td class="text-center">22</td>
 				<td class="text-center">1</td>
-				<td class="text-center">60</td>
+				<td class="text-center">68</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1404,9 +1466,9 @@
 				<td class="text-center">1.8 GiB</td>
 				<td class="text-center" data-timestamp="1625446545">2021-07-05 00:55</td>
 
-				<td class="text-center">16</td>
+				<td class="text-center">15</td>
 				<td class="text-center">13</td>
-				<td class="text-center">16</td>
+				<td class="text-center">21</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1424,9 +1486,9 @@
 				<td class="text-center">770.4 MiB</td>
 				<td class="text-center" data-timestamp="1625446340">2021-07-05 00:52</td>
 
-				<td class="text-center">7</td>
-				<td class="text-center">2</td>
-				<td class="text-center">15</td>
+				<td class="text-center">5</td>
+				<td class="text-center">3</td>
+				<td class="text-center">16</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1444,9 +1506,9 @@
 				<td class="text-center">353.9 MiB</td>
 				<td class="text-center" data-timestamp="1625445068">2021-07-05 00:31</td>
 
-				<td class="text-center">24</td>
-				<td class="text-center">6</td>
-				<td class="text-center">56</td>
+				<td class="text-center">27</td>
+				<td class="text-center">5</td>
+				<td class="text-center">66</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1464,9 +1526,9 @@
 				<td class="text-center">334.8 MiB</td>
 				<td class="text-center" data-timestamp="1625443415">2021-07-05 00:03</td>
 
-				<td class="text-center">19</td>
-				<td class="text-center">6</td>
-				<td class="text-center">64</td>
+				<td class="text-center">24</td>
+				<td class="text-center">5</td>
+				<td class="text-center">73</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1484,9 +1546,9 @@
 				<td class="text-center">13.7 GiB</td>
 				<td class="text-center" data-timestamp="1625442141">2021-07-04 23:42</td>
 
-				<td class="text-center">2</td>
+				<td class="text-center">3</td>
 				<td class="text-center">1</td>
-				<td class="text-center">2</td>
+				<td class="text-center">3</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1504,9 +1566,9 @@
 				<td class="text-center">253.6 MiB</td>
 				<td class="text-center" data-timestamp="1625441963">2021-07-04 23:39</td>
 
-				<td class="text-center">17</td>
-				<td class="text-center">6</td>
-				<td class="text-center">57</td>
+				<td class="text-center">16</td>
+				<td class="text-center">5</td>
+				<td class="text-center">65</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1524,8 +1586,8 @@
 				<td class="text-center">393.2 MiB</td>
 				<td class="text-center" data-timestamp="1625440912">2021-07-04 23:21</td>
 
-				<td class="text-center">10</td>
-				<td class="text-center">2</td>
+				<td class="text-center">9</td>
+				<td class="text-center">1</td>
 				<td class="text-center">16</td>
 			</tr>
 			<tr class="default">
@@ -1547,7 +1609,7 @@
 				<td class="text-center" data-timestamp="1625440121">2021-07-04 23:08</td>
 
 				<td class="text-center">12</td>
-				<td class="text-center">3</td>
+				<td class="text-center">1</td>
 				<td class="text-center">17</td>
 			</tr>
 			<tr class="default">
@@ -1566,9 +1628,9 @@
 				<td class="text-center">15.4 GiB</td>
 				<td class="text-center" data-timestamp="1625439931">2021-07-04 23:05</td>
 
-				<td class="text-center">9</td>
-				<td class="text-center">7</td>
-				<td class="text-center">3</td>
+				<td class="text-center">10</td>
+				<td class="text-center">6</td>
+				<td class="text-center">4</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1577,8 +1639,8 @@
 					</a>
 				</td>
 				<td colspan="2">
-					<a href="/view/1405838#comments" class="comments" title="2 comments">
-						<i class="fa fa-comments-o"/>2</a>
+					<a href="/view/1405838#comments" class="comments" title="3 comments">
+						<i class="fa fa-comments-o"/>3</a>
 					<a href="/view/1405838" title="[Gao] Tokyo卍Revengers - 13 (Uncensored) (WEB 1080p Hi10P E-AC3)">[Gao] Tokyo卍Revengers - 13 (Uncensored) (WEB 1080p Hi10P E-AC3)</a>
 				</td>
 				<td class="text-center">
@@ -1589,8 +1651,8 @@
 				<td class="text-center" data-timestamp="1625439866">2021-07-04 23:04</td>
 
 				<td class="text-center">30</td>
-				<td class="text-center">5</td>
-				<td class="text-center">87</td>
+				<td class="text-center">3</td>
+				<td class="text-center">92</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1631,8 +1693,8 @@
 				<td class="text-center" data-timestamp="1625439451">2021-07-04 22:57</td>
 
 				<td class="text-center">7</td>
-				<td class="text-center">1</td>
-				<td class="text-center">11</td>
+				<td class="text-center">3</td>
+				<td class="text-center">12</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1650,9 +1712,9 @@
 				<td class="text-center">1.8 GiB</td>
 				<td class="text-center" data-timestamp="1625439398">2021-07-04 22:56</td>
 
-				<td class="text-center">9</td>
-				<td class="text-center">6</td>
-				<td class="text-center">23</td>
+				<td class="text-center">10</td>
+				<td class="text-center">4</td>
+				<td class="text-center">24</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1672,9 +1734,9 @@
 				<td class="text-center">2.2 GiB</td>
 				<td class="text-center" data-timestamp="1625438379">2021-07-04 22:39</td>
 
-				<td class="text-center">47</td>
-				<td class="text-center">10</td>
-				<td class="text-center">102</td>
+				<td class="text-center">41</td>
+				<td class="text-center">16</td>
+				<td class="text-center">103</td>
 			</tr>
 			<tr class="success">
 				<td>
@@ -1694,9 +1756,9 @@
 				<td class="text-center">967.7 MiB</td>
 				<td class="text-center" data-timestamp="1625437741">2021-07-04 22:29</td>
 
-				<td class="text-center">40</td>
-				<td class="text-center">4</td>
-				<td class="text-center">100</td>
+				<td class="text-center">37</td>
+				<td class="text-center">2</td>
+				<td class="text-center">102</td>
 			</tr>
 			<tr class="danger">
 				<td>
@@ -1714,7 +1776,7 @@
 				<td class="text-center">138.5 MiB</td>
 				<td class="text-center" data-timestamp="1625436117">2021-07-04 22:01</td>
 
-				<td class="text-center">12</td>
+				<td class="text-center">11</td>
 				<td class="text-center">3</td>
 				<td class="text-center">18</td>
 			</tr>
@@ -1734,9 +1796,9 @@
 				<td class="text-center">245.6 MiB</td>
 				<td class="text-center" data-timestamp="1625435846">2021-07-04 21:57</td>
 
-				<td class="text-center">275</td>
-				<td class="text-center">55</td>
-				<td class="text-center">1300</td>
+				<td class="text-center">328</td>
+				<td class="text-center">98</td>
+				<td class="text-center">1425</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1754,7 +1816,7 @@
 				<td class="text-center">9.5 GiB</td>
 				<td class="text-center" data-timestamp="1625434134">2021-07-04 21:28</td>
 
-				<td class="text-center">2</td>
+				<td class="text-center">1</td>
 				<td class="text-center">0</td>
 				<td class="text-center">1</td>
 			</tr>
@@ -1774,9 +1836,9 @@
 				<td class="text-center">224.7 MiB</td>
 				<td class="text-center" data-timestamp="1625433992">2021-07-04 21:26</td>
 
-				<td class="text-center">23</td>
-				<td class="text-center">2</td>
-				<td class="text-center">48</td>
+				<td class="text-center">18</td>
+				<td class="text-center">3</td>
+				<td class="text-center">51</td>
 			</tr>
 			<tr class="default">
 				<td>
@@ -1795,70 +1857,8 @@
 				<td class="text-center" data-timestamp="1625433613">2021-07-04 21:20</td>
 
 				<td class="text-center">3</td>
-				<td class="text-center">1</td>
-				<td class="text-center">8</td>
-			</tr>
-			<tr class="default">
-				<td>
-					<a href="/?c=1_3" title="Anime - Non-English-translated">
-						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
-					</a>
-				</td>
-				<td colspan="2">
-					<a href="/view/1405825" title="[Naruto-Kun.Hu] Nanatsu no Taizai - Fundou no Shinpan 24 [1080p].mp4">[Naruto-Kun.Hu] Nanatsu no Taizai - Fundou no Shinpan 24 [1080p].mp4</a>
-				</td>
-				<td class="text-center">
-					<a href="/download/1405825.torrent"><i class="fa fa-fw fa-download"/></a>
-					<a href="magnet:?xt=urn:btih:4c8cc6a2298db7234d15da5f3af79c04ed69accf&amp;dn=%5BNaruto-Kun.Hu%5D%20Nanatsu%20no%20Taizai%20-%20Fundou%20no%20Shinpan%2024%20%5B1080p%5D.mp4&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
-				</td>
-				<td class="text-center">302.9 MiB</td>
-				<td class="text-center" data-timestamp="1625433046">2021-07-04 21:10</td>
-
-				<td class="text-center">14</td>
 				<td class="text-center">2</td>
-				<td class="text-center">10</td>
-			</tr>
-			<tr class="success">
-				<td>
-					<a href="/?c=1_2" title="Anime - English-translated">
-						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
-					</a>
-				</td>
-				<td colspan="2">
-					<a href="/view/1405824#comments" class="comments" title="6 comments">
-						<i class="fa fa-comments-o"/>6</a>
-					<a href="/view/1405824" title="[MTBB] Odd Taxi - 04">[MTBB] Odd Taxi - 04</a>
-				</td>
-				<td class="text-center">
-					<a href="/download/1405824.torrent"><i class="fa fa-fw fa-download"/></a>
-					<a href="magnet:?xt=urn:btih:311d7bf8c253ec8c075f159b6f9b9aa87824cad4&amp;dn=%5BMTBB%5D%20Odd%20Taxi%20-%2004&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
-				</td>
-				<td class="text-center">812.6 MiB</td>
-				<td class="text-center" data-timestamp="1625432670">2021-07-04 21:04</td>
-
-				<td class="text-center">27</td>
-				<td class="text-center">1</td>
-				<td class="text-center">96</td>
-			</tr>
-			<tr class="default">
-				<td>
-					<a href="/?c=1_3" title="Anime - Non-English-translated">
-						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
-					</a>
-				</td>
-				<td colspan="2">
-					<a href="/view/1405823" title="Fruits Basket (season 3) - 13 (2021) [WEBDL 720p] Ukr MVO SUB">Fruits Basket (season 3) - 13 (2021) [WEBDL 720p] Ukr MVO SUB</a>
-				</td>
-				<td class="text-center">
-					<a href="/download/1405823.torrent"><i class="fa fa-fw fa-download"/></a>
-					<a href="magnet:?xt=urn:btih:6ac0b5f76f88525816f3d1cc41943d022d6e348e&amp;dn=Fruits%20Basket%20%28season%203%29%20-%2013%20%282021%29%20%5BWEBDL%20720p%5D%20Ukr%20MVO%20SUB&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
-				</td>
-				<td class="text-center">747.9 MiB</td>
-				<td class="text-center" data-timestamp="1625432402">2021-07-04 21:00</td>
-
-				<td class="text-center">1</td>
-				<td class="text-center">0</td>
-				<td class="text-center">1</td>
+				<td class="text-center">8</td>
 			</tr>
 		</tbody>
 	</table>

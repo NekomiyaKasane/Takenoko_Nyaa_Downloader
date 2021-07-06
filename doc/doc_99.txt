@@ -1,0 +1,1883 @@
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Browse :: Nyaa</title>
+
+		<meta name="viewport" content="width=480px"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<link rel="shortcut icon" type="image/png" href="/static/favicon.png"/>
+		<link rel="icon" type="image/png" href="/static/favicon.png"/>
+		<link rel="mask-icon" href="/static/pinned-tab.svg" color="#3582F7"/>
+		<link rel="alternate" type="application/rss+xml" href="https://nyaa.si/?page=rss"/>
+
+		<meta property="og:site_name" content="Nyaa"/>
+		<meta property="og:title" content="Browse :: Nyaa"/>
+		<meta property="og:image" content="/static/img/avatar/default.png"/>
+<meta name="description" content="A BitTorrent community focused on Eastern Asian media including anime, manga, music, and more"/>
+<meta name="keywords" content="torrents, bittorrent, torrent, anime, manga, sukebei, download, nyaa, magnet, magnets"/>
+<meta property="og:description" content="Nyaa homepage"/>
+
+		<!-- Bootstrap core CSS -->
+		<!--
+			Note: This has been customized at http://getbootstrap.com/customize/ to
+			set the column breakpoint to tablet mode, instead of mobile. This is to
+			make the navbar not look awful on tablets.
+		-->
+		<link href="/static/css/bootstrap.min.css?t=1608007388" rel="stylesheet" id="bsThemeLink"/>
+		<link href="/static/css/bootstrap-xl-mod.css?t=1608007388" rel="stylesheet"/>
+		<!--
+			This theme changer script needs to be inline and right under the above stylesheet link to prevent FOUC (Flash Of Unstyled Content)
+			Development version is commented out in static/js/main.js at the bottom of the file
+		-->
+		<script>function toggleDarkMode(){"dark"===localStorage.getItem("theme")?setThemeLight():setThemeDark()}function setThemeDark(){bsThemeLink.href="/static/css/bootstrap-dark.min.css?t=1608007388",localStorage.setItem("theme","dark"),document.body!==null&amp;&amp;document.body.classList.add('dark')}function setThemeLight(){bsThemeLink.href="/static/css/bootstrap.min.css?t=1608007388",localStorage.setItem("theme","light"),document.body!==null&amp;&amp;document.body.classList.remove('dark')}if("undefined"!=typeof Storage){var bsThemeLink=document.getElementById("bsThemeLink");"dark"===localStorage.getItem("theme")&amp;&amp;setThemeDark()}</script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css" integrity="sha256-an4uqLnVJ2flr7w0U74xiF4PJjO2N5Df91R2CUmCLCA=" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"/>
+
+		<!-- Custom styles for this template -->
+		<link href="/static/css/main.css?t=1608007388" rel="stylesheet"/>
+
+		<!-- Core JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.3.1/markdown-it.min.js" integrity="sha256-3WZyZQOe+ql3pLo90lrkRtALrlniGdnf//gRpW0UQks=" crossorigin="anonymous"/>
+		<!-- Modified to not apply border-radius to selectpickers and stuff so our navbar looks cool -->
+		<script src="/static/js/bootstrap-select.min.js?t=1623304983"/>
+		<script src="/static/js/main.min.js?t=1623304983"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="search" type="application/opensearchdescription+xml" title="Nyaa.si" href="/static/search.xml"/>
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"/>
+					<span class="icon-bar"/>
+					<span class="icon-bar"/>
+					</button>
+					<a class="navbar-brand" href="/">Nyaa</a>
+				</div><!--/.navbar-header -->
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/upload">Upload</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								Info
+								<span class="caret"/>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="/rules">Rules</a></li>
+								<li><a href="/help">Help</a></li>
+							</ul>
+						</li>
+						<li><a href="/?page=rss">RSS</a></li>
+						<li><a href="https://twitter.com/NyaaV2">Twitter</a></li>
+						<li><a href="//sukebei.nyaa.si">Fap</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle visible-lg visible-sm visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-user fa-fw"/>
+								Guest
+								<span class="caret"/>
+							</a>
+							<a href="#" class="dropdown-toggle hidden-lg hidden-sm hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-user fa-fw"/>
+								<span class="caret"/>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/login">
+										<i class="fa fa-sign-in fa-fw"/>
+										Login
+									</a>
+								</li>
+								<li>
+									<a href="/register">
+										<i class="fa fa-pencil fa-fw"/>
+										Register
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+
+
+					<div class="search-container visible-xs visible-sm">
+						<form class="navbar-form navbar-right form" action="/" method="get">
+
+							<input type="text" class="form-control" name="q" placeholder="Search..." value=""/>
+							<br/>
+
+							<select class="form-control" title="Filter" data-width="120px" name="f">
+								<option value="0" title="No filter" selected="selected">No filter</option>
+								<option value="1" title="No remakes">No remakes</option>
+								<option value="2" title="Trusted only">Trusted only</option>
+							</select>
+
+							<br/>
+
+							<select class="form-control" title="Category" data-width="200px" name="c">
+								<option value="0_0" title="All categories" selected="selected">
+									All categories
+								</option>
+								<option value="1_0" title="Anime">
+									Anime
+								</option>
+								<option value="1_1" title="Anime - AMV">
+									- Anime Music Video
+								</option>
+								<option value="1_2" title="Anime - English">
+									- English-translated
+								</option>
+								<option value="1_3" title="Anime - Non-English">
+									- Non-English-translated
+								</option>
+								<option value="1_4" title="Anime - Raw">
+									- Raw
+								</option>
+								<option value="2_0" title="Audio">
+									Audio
+								</option>
+								<option value="2_1" title="Audio - Lossless">
+									- Lossless
+								</option>
+								<option value="2_2" title="Audio - Lossy">
+									- Lossy
+								</option>
+								<option value="3_0" title="Literature">
+									Literature
+								</option>
+								<option value="3_1" title="Literature - English">
+									- English-translated
+								</option>
+								<option value="3_2" title="Literature - Non-English">
+									- Non-English-translated
+								</option>
+								<option value="3_3" title="Literature - Raw">
+									- Raw
+								</option>
+								<option value="4_0" title="Live Action">
+									Live Action
+								</option>
+								<option value="4_1" title="Live Action - English">
+									- English-translated
+								</option>
+								<option value="4_2" title="Live Action - Idol/PV">
+									- Idol/Promotional Video
+								</option>
+								<option value="4_3" title="Live Action - Non-English">
+									- Non-English-translated
+								</option>
+								<option value="4_4" title="Live Action - Raw">
+									- Raw
+								</option>
+								<option value="5_0" title="Pictures">
+									Pictures
+								</option>
+								<option value="5_1" title="Pictures - Graphics">
+									- Graphics
+								</option>
+								<option value="5_2" title="Pictures - Photos">
+									- Photos
+								</option>
+								<option value="6_0" title="Software">
+									Software
+								</option>
+								<option value="6_1" title="Software - Apps">
+									- Applications
+								</option>
+								<option value="6_2" title="Software - Games">
+									- Games
+								</option>
+							</select>
+
+							<br/>
+
+							<button class="btn btn-primary form-control" type="submit">
+								<i class="fa fa-search fa-fw"/> Search
+							</button>
+						</form>
+					</div><!--/.search-container -->
+
+					<form class="navbar-form navbar-right form" action="/" method="get">
+						<div class="input-group search-container hidden-xs hidden-sm">
+							<div class="input-group-btn nav-filter" id="navFilter-criteria">
+								<select class="selectpicker show-tick" title="Filter" data-width="120px" name="f">
+									<option value="0" title="No filter" selected="selected">No filter</option>
+									<option value="1" title="No remakes">No remakes</option>
+									<option value="2" title="Trusted only">Trusted only</option>
+								</select>
+							</div>
+
+							<div class="input-group-btn nav-filter" id="navFilter-category">
+								<!--
+									On narrow viewports, there isn't enough room to fit the full stuff in the selectpicker, so we show a full-width one on wide viewports, but squish it on narrow ones.
+								-->
+								<select class="selectpicker show-tick" title="Category" data-width="130px" name="c">
+									<option value="0_0" title="All categories" selected="selected">
+										All categories
+									</option>
+									<option value="1_0" title="Anime">
+										Anime
+									</option>
+									<option value="1_1" title="Anime - AMV">
+										- Anime Music Video
+									</option>
+									<option value="1_2" title="Anime - English">
+										- English-translated
+									</option>
+									<option value="1_3" title="Anime - Non-English">
+										- Non-English-translated
+									</option>
+									<option value="1_4" title="Anime - Raw">
+										- Raw
+									</option>
+									<option value="2_0" title="Audio">
+										Audio
+									</option>
+									<option value="2_1" title="Audio - Lossless">
+										- Lossless
+									</option>
+									<option value="2_2" title="Audio - Lossy">
+										- Lossy
+									</option>
+									<option value="3_0" title="Literature">
+										Literature
+									</option>
+									<option value="3_1" title="Literature - English">
+										- English-translated
+									</option>
+									<option value="3_2" title="Literature - Non-English">
+										- Non-English-translated
+									</option>
+									<option value="3_3" title="Literature - Raw">
+										- Raw
+									</option>
+									<option value="4_0" title="Live Action">
+										Live Action
+									</option>
+									<option value="4_1" title="Live Action - English">
+										- English-translated
+									</option>
+									<option value="4_2" title="Live Action - Idol/PV">
+										- Idol/Promotional Video
+									</option>
+									<option value="4_3" title="Live Action - Non-English">
+										- Non-English-translated
+									</option>
+									<option value="4_4" title="Live Action - Raw">
+										- Raw
+									</option>
+									<option value="5_0" title="Pictures">
+										Pictures
+									</option>
+									<option value="5_1" title="Pictures - Graphics">
+										- Graphics
+									</option>
+									<option value="5_2" title="Pictures - Photos">
+										- Photos
+									</option>
+									<option value="6_0" title="Software">
+										Software
+									</option>
+									<option value="6_1" title="Software - Apps">
+										- Applications
+									</option>
+									<option value="6_2" title="Software - Games">
+										- Games
+									</option>
+								</select>
+							</div>
+							<input type="text" class="form-control search-bar" name="q" placeholder="Search..." value=""/>
+							<div class="input-group-btn search-btn">
+								<button class="btn btn-primary" type="submit">
+									<i class="fa fa-search fa-fw"/>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div><!--/.nav-collapse -->
+			</div><!--/.container -->
+		</nav>
+
+		<div class="container">
+
+
+
+
+
+<div class="table-responsive">
+	<table class="table table-bordered table-hover table-striped torrent-list">
+		<thead>
+			<tr>
+				<th class="hdr-category text-center" style="width:80px;">Category</th>
+				<th class="hdr-name" style="width:auto;">Name</th>
+				<th class="hdr-comments sorting text-center" title="Comments" style="width:50px;"><a href="/?s=comments&amp;o=desc"/><i class="fa fa-comments-o"/></th>
+				<th class="hdr-link text-center" style="width:70px;">Link</th>
+				<th class="hdr-size sorting text-center" style="width:100px;"><a href="/?s=size&amp;o=desc"/>Size</th>
+				<th class="hdr-date sorting_desc text-center" title="In UTC" style="width:140px;"><a href="/?s=id&amp;o=asc"/>Date</th>
+
+				<th class="hdr-seeders sorting text-center" title="Seeders" style="width:50px;"><a href="/?s=seeders&amp;o=desc"/><i class="fa fa-arrow-up" aria-hidden="true"/></th>
+				<th class="hdr-leechers sorting text-center" title="Leechers" style="width:50px;"><a href="/?s=leechers&amp;o=desc"/><i class="fa fa-arrow-down" aria-hidden="true"/></th>
+				<th class="hdr-downloads sorting text-center" title="Completed downloads" style="width:50px;"><a href="/?s=downloads&amp;o=desc"/><i class="fa fa-check" aria-hidden="true"/></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398138" title="[IrizaRaws] Idolls Idol Survival (BDRip 1920x1080 x264 10bit FLAC)">[IrizaRaws] Idolls Idol Survival (BDRip 1920x1080 x264 10bit FLAC)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398138.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:481ad6321c8e5f6d1df52b6f32d77ea7ee6f8234&amp;dn=%5BIrizaRaws%5D%20Idolls%20Idol%20Survival%20%28BDRip%201920x1080%20x264%2010bit%20FLAC%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">7.5 GiB</td>
+				<td class="text-center" data-timestamp="1623687548">2021-06-14 16:19</td>
+
+				<td class="text-center">4</td>
+				<td class="text-center">0</td>
+				<td class="text-center">46</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398137" title="[Lilith-Raws] 刮掉鬍子的我與撿到的女高中生 / Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]">[Lilith-Raws] 刮掉鬍子的我與撿到的女高中生 / Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398137.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:221463ebf44d6cd806c6936efac84d40c6883460&amp;dn=%5BLilith-Raws%5D%20%E5%88%AE%E6%8E%89%E9%AC%8D%E5%AD%90%E7%9A%84%E6%88%91%E8%88%87%E6%92%BF%E5%88%B0%E7%9A%84%E5%A5%B3%E9%AB%98%E4%B8%AD%E7%94%9F%20%2F%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%5BBaha%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHT%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">294.4 MiB</td>
+				<td class="text-center" data-timestamp="1623687506">2021-06-14 16:18</td>
+
+				<td class="text-center">44</td>
+				<td class="text-center">1</td>
+				<td class="text-center">1897</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398136" title="[Lilith-Raws] 王者天下 / Kingdom S03 - 11 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]">[Lilith-Raws] 王者天下 / Kingdom S03 - 11 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398136.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:9cd9564622204c9b85f80a05028f3a69a94d42d1&amp;dn=%5BLilith-Raws%5D%20%E7%8E%8B%E8%80%85%E5%A4%A9%E4%B8%8B%20%2F%20Kingdom%20S03%20-%2011%20%5BBaha%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHT%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">612.0 MiB</td>
+				<td class="text-center" data-timestamp="1623687480">2021-06-14 16:18</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">249</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=4_3" title="Live Action - Non-English-translated">
+						<img src="/static/img/icons/nyaa/4_3.png" alt="Live Action - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398132" title="Lam Chingying last drama 一枝花和尚">Lam Chingying last drama 一枝花和尚</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398132.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:af137dc804ba5341757c17d58a99c9d2f0e37559&amp;dn=Lam%20Chingying%20last%20drama%20%E4%B8%80%E6%9E%9D%E8%8A%B1%E5%92%8C%E5%B0%9A&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">4.4 GiB</td>
+				<td class="text-center" data-timestamp="1623687295">2021-06-14 16:14</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">3</td>
+				<td class="text-center">9</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398131" title="[SubsPlease] Yakunara Mug Cup mo - 11.1 (1080p) [B8F71B59].mkv">[SubsPlease] Yakunara Mug Cup mo - 11.1 (1080p) [B8F71B59].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398131.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:2e76a2ae7a72eed8495130805475308b37f6c621&amp;dn=%5BSubsPlease%5D%20Yakunara%20Mug%20Cup%20mo%20-%2011.1%20%281080p%29%20%5BB8F71B59%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">529.1 MiB</td>
+				<td class="text-center" data-timestamp="1623687119">2021-06-14 16:11</td>
+
+				<td class="text-center">34</td>
+				<td class="text-center">0</td>
+				<td class="text-center">651</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398130" title="【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MP4 720P BIG5">【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MP4 720P BIG5</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398130.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:0e115d64bf1d592d13a21a86e1845ca95a32c88b&amp;dn=%E3%80%90%E6%9E%81%E5%BD%B1%E5%AD%97%E5%B9%95%E7%A4%BE%E3%80%91%E5%89%83%E9%A1%BB%E3%80%82%E7%84%B6%E5%90%8E%E6%8D%A1%E5%88%B0%E5%A5%B3%E9%AB%98%E4%B8%AD%E7%94%9F%E3%80%82%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20%E7%AC%AC08%E8%AF%9D%20MP4%20720P%20BIG5&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">129.2 MiB</td>
+				<td class="text-center" data-timestamp="1623687119">2021-06-14 16:11</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">0</td>
+				<td class="text-center">130</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398129" title="【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MP4 720P GB">【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MP4 720P GB</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398129.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:14aa0ec0169d621877a7d6ab91f29101ee54a4c9&amp;dn=%E3%80%90%E6%9E%81%E5%BD%B1%E5%AD%97%E5%B9%95%E7%A4%BE%E3%80%91%E5%89%83%E9%A1%BB%E3%80%82%E7%84%B6%E5%90%8E%E6%8D%A1%E5%88%B0%E5%A5%B3%E9%AB%98%E4%B8%AD%E7%94%9F%E3%80%82%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20%E7%AC%AC08%E8%AF%9D%20MP4%20720P%20GB&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">129.1 MiB</td>
+				<td class="text-center" data-timestamp="1623687116">2021-06-14 16:11</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">1</td>
+				<td class="text-center">67</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398128" title="【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MP4 1080P BIG5">【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MP4 1080P BIG5</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398128.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:033458de4ee79ef53174f90de0f69fbe2811aa84&amp;dn=%E3%80%90%E6%9E%81%E5%BD%B1%E5%AD%97%E5%B9%95%E7%A4%BE%E3%80%91%E5%89%83%E9%A1%BB%E3%80%82%E7%84%B6%E5%90%8E%E6%8D%A1%E5%88%B0%E5%A5%B3%E9%AB%98%E4%B8%AD%E7%94%9F%E3%80%82%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20%E7%AC%AC08%E8%AF%9D%20MP4%201080P%20BIG5&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">232.4 MiB</td>
+				<td class="text-center" data-timestamp="1623687114">2021-06-14 16:11</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">0</td>
+				<td class="text-center">77</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398127" title="[SubsPlease] Yakunara Mug Cup mo - 11.1 (720p) [9E0D6380].mkv">[SubsPlease] Yakunara Mug Cup mo - 11.1 (720p) [9E0D6380].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398127.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:0527325b0a1d8d238f46e9e7ed129a5e3a358576&amp;dn=%5BSubsPlease%5D%20Yakunara%20Mug%20Cup%20mo%20-%2011.1%20%28720p%29%20%5B9E0D6380%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">271.9 MiB</td>
+				<td class="text-center" data-timestamp="1623687112">2021-06-14 16:11</td>
+
+				<td class="text-center">22</td>
+				<td class="text-center">0</td>
+				<td class="text-center">554</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398126" title="【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MP4 1080P GB">【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MP4 1080P GB</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398126.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:8212badd25468840510b68767e8750d9730331c0&amp;dn=%E3%80%90%E6%9E%81%E5%BD%B1%E5%AD%97%E5%B9%95%E7%A4%BE%E3%80%91%E5%89%83%E9%A1%BB%E3%80%82%E7%84%B6%E5%90%8E%E6%8D%A1%E5%88%B0%E5%A5%B3%E9%AB%98%E4%B8%AD%E7%94%9F%E3%80%82%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20%E7%AC%AC08%E8%AF%9D%20MP4%201080P%20GB&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">232.4 MiB</td>
+				<td class="text-center" data-timestamp="1623687112">2021-06-14 16:11</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">1</td>
+				<td class="text-center">49</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398125" title="【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MKV 1080P 繁简内嵌">【极影字幕社】剃须。然后捡到女高中生。 Hige wo Soru. Soshite Joshikousei wo Hirou. 第08话 MKV 1080P 繁简内嵌</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398125.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:5aaadaee5264b265847e1e72fdd2a0b769dfd93a&amp;dn=%E3%80%90%E6%9E%81%E5%BD%B1%E5%AD%97%E5%B9%95%E7%A4%BE%E3%80%91%E5%89%83%E9%A1%BB%E3%80%82%E7%84%B6%E5%90%8E%E6%8D%A1%E5%88%B0%E5%A5%B3%E9%AB%98%E4%B8%AD%E7%94%9F%E3%80%82%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20%E7%AC%AC08%E8%AF%9D%20MKV%201080P%20%E7%B9%81%E7%AE%80%E5%86%85%E5%B5%8C&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">353.4 MiB</td>
+				<td class="text-center" data-timestamp="1623687110">2021-06-14 16:11</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">0</td>
+				<td class="text-center">52</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398124" title="[SubsPlease] Yakunara Mug Cup mo - 11.1 (480p) [104D8D5E].mkv">[SubsPlease] Yakunara Mug Cup mo - 11.1 (480p) [104D8D5E].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398124.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:8d5679831c47acc509b33337ea09575c35e6fd07&amp;dn=%5BSubsPlease%5D%20Yakunara%20Mug%20Cup%20mo%20-%2011.1%20%28480p%29%20%5B104D8D5E%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">141.1 MiB</td>
+				<td class="text-center" data-timestamp="1623687101">2021-06-14 16:11</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">0</td>
+				<td class="text-center">156</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398123" title="[SSA] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [720p].mkv">[SSA] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [720p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398123.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:6f7482c1f6d0dd5a299274b96f7128d24e74880d&amp;dn=%5BSSA%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%5B720p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">89.6 MiB</td>
+				<td class="text-center" data-timestamp="1623687084">2021-06-14 16:11</td>
+
+				<td class="text-center">21</td>
+				<td class="text-center">0</td>
+				<td class="text-center">401</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398122" title="[SSA] Itazuraguma no Gloomy - 10 [720p].mkv">[SSA] Itazuraguma no Gloomy - 10 [720p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398122.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:fabebe77d922c8fb924a39d39ab59f72a2d4c6ce&amp;dn=%5BSSA%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%5B720p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">5.5 MiB</td>
+				<td class="text-center" data-timestamp="1623687034">2021-06-14 16:10</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">0</td>
+				<td class="text-center">43</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398120#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1398120" title="[EMBER] Babylon (2019) (Season 1) [BDRip] [1080p Dual Audio HEVC 10 bits]">[EMBER] Babylon (2019) (Season 1) [BDRip] [1080p Dual Audio HEVC 10 bits]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398120.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:496f226aaf16ba85cdcef7d383d888b92d6030d1&amp;dn=%5BEMBER%5D%20Babylon%20%282019%29%20%28Season%201%29%20%5BBDRip%5D%20%5B1080p%20Dual%20Audio%20HEVC%2010%20bits%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">5.2 GiB</td>
+				<td class="text-center" data-timestamp="1623686661">2021-06-14 16:04</td>
+
+				<td class="text-center">18</td>
+				<td class="text-center">5</td>
+				<td class="text-center">344</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398119" title="[AhmadDev] Hige wo Soru. Soshite Joshikousei wo Hirou. - 09 [720p].mkv">[AhmadDev] Hige wo Soru. Soshite Joshikousei wo Hirou. - 09 [720p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398119.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:be76e44cb012305f5f2f859d7a55a540752d479d&amp;dn=%5BAhmadDev%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2009%20%5B720p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">94.2 MiB</td>
+				<td class="text-center" data-timestamp="1623686433">2021-06-14 16:00</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">17</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398118" title="[AhmadDev] Hige wo Soru. Soshite Joshikousei wo Hirou. - 09 [1080p].mkv">[AhmadDev] Hige wo Soru. Soshite Joshikousei wo Hirou. - 09 [1080p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398118.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:a3b58d2771708ae525dc7e947a6904d1e95b347d&amp;dn=%5BAhmadDev%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2009%20%5B1080p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">154.9 MiB</td>
+				<td class="text-center" data-timestamp="1623686406">2021-06-14 16:00</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">0</td>
+				<td class="text-center">26</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398117" title="[SSA] Itazuraguma no Gloomy - 10 [1080p].mkv">[SSA] Itazuraguma no Gloomy - 10 [1080p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398117.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:34ed537fd44d556ed6ca0d19c3ce82e8f6e4e306&amp;dn=%5BSSA%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%5B1080p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">9.2 MiB</td>
+				<td class="text-center" data-timestamp="1623686372">2021-06-14 15:59</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">0</td>
+				<td class="text-center">46</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_3" title="Literature - Raw">
+						<img src="/static/img/icons/nyaa/3_3.png" alt="Literature - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398116" title="いわかける！！ －Try a new climbing－ 第01-06巻 [Iwa kakeru!! Try a new climbing vol 01-06]">いわかける！！ －Try a new climbing－ 第01-06巻 [Iwa kakeru!! Try a new climbing vol 01-06]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398116.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:d720a202879d6503d39fb437754a951c1ab194ce&amp;dn=%E3%81%84%E3%82%8F%E3%81%8B%E3%81%91%E3%82%8B%EF%BC%81%EF%BC%81%20%EF%BC%8DTry%20a%20new%20climbing%EF%BC%8D%20%E7%AC%AC01-06%E5%B7%BB%20%5BIwa%20kakeru%21%21%20Try%20a%20new%20climbing%20vol%2001-06%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">264.6 MiB</td>
+				<td class="text-center" data-timestamp="1623686252">2021-06-14 15:57</td>
+
+				<td class="text-center">18</td>
+				<td class="text-center">1</td>
+				<td class="text-center">1573</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=4_4" title="Live Action - Raw">
+						<img src="/static/img/icons/nyaa/4_4.png" alt="Live Action - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398115" title="サウナを愛でたい 2021.06.14 「東京都千代田区 サウナラボ神田 Part①」 [字].mkv">サウナを愛でたい 2021.06.14 「東京都千代田区 サウナラボ神田 Part①」 [字].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398115.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:91c0ed3890c412b3f241bffa4412deb0389d5613&amp;dn=%E3%82%B5%E3%82%A6%E3%83%8A%E3%82%92%E6%84%9B%E3%81%A7%E3%81%9F%E3%81%84%202021.06.14%20%E3%80%8C%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%20%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%A9%E3%83%9C%E7%A5%9E%E7%94%B0%20Part%E2%91%A0%E3%80%8D%20%5B%E5%AD%97%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">295.4 MiB</td>
+				<td class="text-center" data-timestamp="1623686056">2021-06-14 15:54</td>
+
+				<td class="text-center">4</td>
+				<td class="text-center">0</td>
+				<td class="text-center">149</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398114" title="[SSA] Yakunara Mug Cup mo - 11 [480p].mkv">[SSA] Yakunara Mug Cup mo - 11 [480p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398114.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:5b6382689d44782e335042d2c87ab4c87907f65a&amp;dn=%5BSSA%5D%20Yakunara%20Mug%20Cup%20mo%20-%2011%20%5B480p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">35.0 MiB</td>
+				<td class="text-center" data-timestamp="1623685896">2021-06-14 15:51</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">1</td>
+				<td class="text-center">66</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398113" title="[SSA] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [1080p].mkv">[SSA] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [1080p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398113.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:3e0749b27fa7aba7e028646746ad1e439cbc9f28&amp;dn=%5BSSA%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%5B1080p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">157.8 MiB</td>
+				<td class="text-center" data-timestamp="1623685367">2021-06-14 15:42</td>
+
+				<td class="text-center">26</td>
+				<td class="text-center">0</td>
+				<td class="text-center">657</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398112" title="[CameEsp] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [ESP-es, ESP-la y ENG] (720p)">[CameEsp] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [ESP-es, ESP-la y ENG] (720p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398112.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:80aea33e16960493e566193ce8195db9f83ee24c&amp;dn=%5BCameEsp%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%5BESP-es%2C%20ESP-la%20y%20ENG%5D%20%28720p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">705.7 MiB</td>
+				<td class="text-center" data-timestamp="1623685119">2021-06-14 15:38</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">1</td>
+				<td class="text-center">8</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398111" title="[CameEsp] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [ESP-es, ESP-la y ENG] (1080p)">[CameEsp] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [ESP-es, ESP-la y ENG] (1080p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398111.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:5d83ae57dcc0efce295593a796c6328649788129&amp;dn=%5BCameEsp%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%5BESP-es%2C%20ESP-la%20y%20ENG%5D%20%281080p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.3 GiB</td>
+				<td class="text-center" data-timestamp="1623685115">2021-06-14 15:38</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">44</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398110" title="[YuiSubs] Itazuraguma no Gloomy - 10  (NVENC H.265 1080p)">[YuiSubs] Itazuraguma no Gloomy - 10  (NVENC H.265 1080p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398110.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:e77c436256f8c1ac45be6b6f0fe3f3eb608d96d3&amp;dn=%5BYuiSubs%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%20%28NVENC%20H.265%201080p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">22.7 MiB</td>
+				<td class="text-center" data-timestamp="1623685088">2021-06-14 15:38</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">0</td>
+				<td class="text-center">22</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398109" title="[YE] EDENS ZERO - 08 (BS4 1280x720x 264 AAC).mkv">[YE] EDENS ZERO - 08 (BS4 1280x720x 264 AAC).mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398109.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:f7dd1f8a6a48ad78e62ddc44210a2681293965fc&amp;dn=%5BYE%5D%20EDENS%20ZERO%20-%2008%20%28BS4%201280x720x%20264%20AAC%29.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">540.7 MiB</td>
+				<td class="text-center" data-timestamp="1623684948">2021-06-14 15:35</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">0</td>
+				<td class="text-center">16</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398108" title="Gloomy The Naughty Grizzly - 10 VOSTFR 720p WEB x264 -NanDesuKa (CR).mkv">Gloomy The Naughty Grizzly - 10 VOSTFR 720p WEB x264 -NanDesuKa (CR).mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398108.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:0d6f3d42bccd3d275c50012828f1bc23130d0067&amp;dn=Gloomy%20The%20Naughty%20Grizzly%20-%2010%20VOSTFR%20720p%20WEB%20x264%20-NanDesuKa%20%28CR%29.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">30.4 MiB</td>
+				<td class="text-center" data-timestamp="1623684849">2021-06-14 15:34</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">0</td>
+				<td class="text-center">8</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398107" title="[ASW] Itazuraguma no Gloomy - 10 [1080p HEVC x265 10Bit][AAC] (Gloomy the Naughty Grizzly)">[ASW] Itazuraguma no Gloomy - 10 [1080p HEVC x265 10Bit][AAC] (Gloomy the Naughty Grizzly)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398107.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:23d7e5abcd2e00469c608ad273c3ba01e8ff1fc8&amp;dn=%5BASW%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%5B1080p%20HEVC%20x265%2010Bit%5D%5BAAC%5D%20%28Gloomy%20the%20Naughty%20Grizzly%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">15.3 MiB</td>
+				<td class="text-center" data-timestamp="1623684847">2021-06-14 15:34</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">0</td>
+				<td class="text-center">84</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398106" title="[SSA] Yakunara Mug Cup mo - 11 [720p].mkv">[SSA] Yakunara Mug Cup mo - 11 [720p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398106.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:16b8d3e3c5e9cb5cd9dc9c79d7c70e3691d3b7ce&amp;dn=%5BSSA%5D%20Yakunara%20Mug%20Cup%20mo%20-%2011%20%5B720p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">56.4 MiB</td>
+				<td class="text-center" data-timestamp="1623684844">2021-06-14 15:34</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">1</td>
+				<td class="text-center">102</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398105" title="Gloomy The Naughty Grizzly - 10 VOSTFR 1080p WEB x264 -NanDesuKa (CR).mkv">Gloomy The Naughty Grizzly - 10 VOSTFR 1080p WEB x264 -NanDesuKa (CR).mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398105.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:3976e0e7507312960cad572d1d69ee818866b38e&amp;dn=Gloomy%20The%20Naughty%20Grizzly%20-%2010%20VOSTFR%201080p%20WEB%20x264%20-NanDesuKa%20%28CR%29.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">59.0 MiB</td>
+				<td class="text-center" data-timestamp="1623684810">2021-06-14 15:33</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">0</td>
+				<td class="text-center">17</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398104" title="[ASW] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [1080p HEVC x265 10Bit][AAC] (Higehiro - After Being Rejected, I Shaved and Took in a High School Runaway)">[ASW] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 [1080p HEVC x265 10Bit][AAC] (Higehiro - After Being Rejected, I Shaved and Took in a High School Runaway)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398104.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:2bb09b226996665a2539a2e8903d133ed5ace2c5&amp;dn=%5BASW%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%5B1080p%20HEVC%20x265%2010Bit%5D%5BAAC%5D%20%28Higehiro%20-%20After%20Being%20Rejected%2C%20I%20Shaved%20and%20Took%20in%20a%20High%20School%20Runaway%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">174.5 MiB</td>
+				<td class="text-center" data-timestamp="1623684792">2021-06-14 15:33</td>
+
+				<td class="text-center">49</td>
+				<td class="text-center">0</td>
+				<td class="text-center">1341</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398103" title="[PuyaSubs!] Itazuraguma no Gloomy - 10 [ESP-ENG][720p][A1619044].mkv">[PuyaSubs!] Itazuraguma no Gloomy - 10 [ESP-ENG][720p][A1619044].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398103.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:9ab10c30fea28bad3a0fa5edd3bed9a436e2d973&amp;dn=%5BPuyaSubs%21%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%5BESP-ENG%5D%5B720p%5D%5BA1619044%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">30.0 MiB</td>
+				<td class="text-center" data-timestamp="1623684728">2021-06-14 15:32</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">24</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398102" title="[PuyaSubs!] Itazuraguma no Gloomy - 10 [ESP-ENG][1080p][29059EF1].mkv">[PuyaSubs!] Itazuraguma no Gloomy - 10 [ESP-ENG][1080p][29059EF1].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398102.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:66959a8a8bc7ea0c134249300c869a9c7251b8d0&amp;dn=%5BPuyaSubs%21%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%5BESP-ENG%5D%5B1080p%5D%5B29059EF1%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">58.7 MiB</td>
+				<td class="text-center" data-timestamp="1623684715">2021-06-14 15:31</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">31</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398101#comments" class="comments" title="3 comments">
+						<i class="fa fa-comments-o"/>3</a>
+					<a href="/view/1398101" title="[aro] Boogiepop wa Warawanai (2019) [BD 1080p x264 FLAC]">[aro] Boogiepop wa Warawanai (2019) [BD 1080p x264 FLAC]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398101.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:01384d6a717b18d2cb457e5782be438a671f908d&amp;dn=%5Baro%5D%20Boogiepop%20wa%20Warawanai%20%282019%29%20%5BBD%201080p%20x264%20FLAC%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">31.8 GiB</td>
+				<td class="text-center" data-timestamp="1623684679">2021-06-14 15:31</td>
+
+				<td class="text-center">8</td>
+				<td class="text-center">0</td>
+				<td class="text-center">29</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398099" title="[NC-Raws] 燒窯的話也要馬克杯 / Yakunara Mug Cup mo - 11B [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]">[NC-Raws] 燒窯的話也要馬克杯 / Yakunara Mug Cup mo - 11B [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398099.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:188447b3569bd850de8cdf779faeb12118f6fba2&amp;dn=%5BNC-Raws%5D%20%E7%87%92%E7%AA%AF%E7%9A%84%E8%A9%B1%E4%B9%9F%E8%A6%81%E9%A6%AC%E5%85%8B%E6%9D%AF%20%2F%20Yakunara%20Mug%20Cup%20mo%20-%2011B%20%5BBaha%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHT%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">283.9 MiB</td>
+				<td class="text-center" data-timestamp="1623684662">2021-06-14 15:31</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">110</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398098" title="[NC-Raws] 燒窯的話也要馬克杯 / Yakunara Mug Cup mo - 11A [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]">[NC-Raws] 燒窯的話也要馬克杯 / Yakunara Mug Cup mo - 11A [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398098.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:096b27a06e33eef5840e4eda9dbc3f160212eabb&amp;dn=%5BNC-Raws%5D%20%E7%87%92%E7%AA%AF%E7%9A%84%E8%A9%B1%E4%B9%9F%E8%A6%81%E9%A6%AC%E5%85%8B%E6%9D%AF%20%2F%20Yakunara%20Mug%20Cup%20mo%20-%2011A%20%5BBaha%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHT%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">200.9 MiB</td>
+				<td class="text-center" data-timestamp="1623684657">2021-06-14 15:30</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">1</td>
+				<td class="text-center">163</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398097" title="[Erai-raws] Itazuraguma no Gloomy - 10 [720p][Multiple Subtitle].mkv">[Erai-raws] Itazuraguma no Gloomy - 10 [720p][Multiple Subtitle].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398097.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:02069f087b34027dac3f30696107b856fd946e31&amp;dn=%5BErai-raws%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%5B720p%5D%5BMultiple%20Subtitle%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">36.9 MiB</td>
+				<td class="text-center" data-timestamp="1623684637">2021-06-14 15:30</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">1</td>
+				<td class="text-center">225</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398096" title="[SubsPlease] Itazuraguma no Gloomy - 10 (1080p) [5003080A].mkv">[SubsPlease] Itazuraguma no Gloomy - 10 (1080p) [5003080A].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398096.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:15844a665db3e2118d25106cc8ca2d54a5464ed7&amp;dn=%5BSubsPlease%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%281080p%29%20%5B5003080A%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">64.1 MiB</td>
+				<td class="text-center" data-timestamp="1623684631">2021-06-14 15:30</td>
+
+				<td class="text-center">15</td>
+				<td class="text-center">0</td>
+				<td class="text-center">377</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398095" title="[SubsPlease] Itazuraguma no Gloomy - 10 (720p) [1C3ED428].mkv">[SubsPlease] Itazuraguma no Gloomy - 10 (720p) [1C3ED428].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398095.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:0149bbeb72c7ec36f5716570570b629a098fd944&amp;dn=%5BSubsPlease%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%28720p%29%20%5B1C3ED428%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">35.4 MiB</td>
+				<td class="text-center" data-timestamp="1623684630">2021-06-14 15:30</td>
+
+				<td class="text-center">9</td>
+				<td class="text-center">0</td>
+				<td class="text-center">342</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398094" title="[SubsPlease] Itazuraguma no Gloomy - 10 (480p) [605E46B0].mkv">[SubsPlease] Itazuraguma no Gloomy - 10 (480p) [605E46B0].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398094.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:e3235a753decbcdbf8ef0ec43f088d689347c667&amp;dn=%5BSubsPlease%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%28480p%29%20%5B605E46B0%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">20.7 MiB</td>
+				<td class="text-center" data-timestamp="1623684630">2021-06-14 15:30</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">103</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398093" title="[Erai-raws] Itazuraguma no Gloomy - 10 [480p][Multiple Subtitle].mkv">[Erai-raws] Itazuraguma no Gloomy - 10 [480p][Multiple Subtitle].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398093.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:36a530cfb0845232815f15d4d1114f165982e6f4&amp;dn=%5BErai-raws%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%5B480p%5D%5BMultiple%20Subtitle%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">22.2 MiB</td>
+				<td class="text-center" data-timestamp="1623684611">2021-06-14 15:30</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">0</td>
+				<td class="text-center">78</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398092" title="[Erai-raws] Itazuraguma no Gloomy - 10 [1080p][Multiple Subtitle].mkv">[Erai-raws] Itazuraguma no Gloomy - 10 [1080p][Multiple Subtitle].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398092.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:94a50e40f8bee5efbeff05d52734c467d31ec6d6&amp;dn=%5BErai-raws%5D%20Itazuraguma%20no%20Gloomy%20-%2010%20%5B1080p%5D%5BMultiple%20Subtitle%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">65.6 MiB</td>
+				<td class="text-center" data-timestamp="1623684610">2021-06-14 15:30</td>
+
+				<td class="text-center">7</td>
+				<td class="text-center">0</td>
+				<td class="text-center">249</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398091" title="【喵萌奶茶屋】★04月新番★[异世界魔王与召唤少女的奴隶魔术Ω/Isekai Maou to Shoukan Shoujo no Dorei Majutsu S2][10END][1080p][简体][招募翻译校对]">【喵萌奶茶屋】★04月新番★[异世界魔王与召唤少女的奴隶魔术Ω/Isekai Maou to Shoukan Shoujo no Dorei Majutsu S2][10END][1080p][简体][招募翻译校对]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398091.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:7cfcbceaa7a5da70dd9c0949c351486967cef430&amp;dn=%E3%80%90%E5%96%B5%E8%90%8C%E5%A5%B6%E8%8C%B6%E5%B1%8B%E3%80%91%E2%98%8504%E6%9C%88%E6%96%B0%E7%95%AA%E2%98%85%5B%E5%BC%82%E4%B8%96%E7%95%8C%E9%AD%94%E7%8E%8B%E4%B8%8E%E5%8F%AC%E5%94%A4%E5%B0%91%E5%A5%B3%E7%9A%84%E5%A5%B4%E9%9A%B6%E9%AD%94%E6%9C%AF%CE%A9%2FIsekai%20Maou%20to%20Shoukan%20Shoujo%20no%20Dorei%20Majutsu%20S2%5D%5B10END%5D%5B1080p%5D%5B%E7%AE%80%E4%BD%93%5D%5B%E6%8B%9B%E5%8B%9F%E7%BF%BB%E8%AF%91%E6%A0%A1%E5%AF%B9%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">505.8 MiB</td>
+				<td class="text-center" data-timestamp="1623683716">2021-06-14 15:15</td>
+
+				<td class="text-center">8</td>
+				<td class="text-center">2</td>
+				<td class="text-center">339</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398090" title="【喵萌奶茶屋】★04月新番★[异世界魔王与召唤少女的奴隶魔术Ω/Isekai Maou to Shoukan Shoujo no Dorei Majutsu S2][10END][720p][简体][招募翻译校对]">【喵萌奶茶屋】★04月新番★[异世界魔王与召唤少女的奴隶魔术Ω/Isekai Maou to Shoukan Shoujo no Dorei Majutsu S2][10END][720p][简体][招募翻译校对]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398090.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:e40d670b8f5e7767626817557e6e3a768cc0cb4a&amp;dn=%E3%80%90%E5%96%B5%E8%90%8C%E5%A5%B6%E8%8C%B6%E5%B1%8B%E3%80%91%E2%98%8504%E6%9C%88%E6%96%B0%E7%95%AA%E2%98%85%5B%E5%BC%82%E4%B8%96%E7%95%8C%E9%AD%94%E7%8E%8B%E4%B8%8E%E5%8F%AC%E5%94%A4%E5%B0%91%E5%A5%B3%E7%9A%84%E5%A5%B4%E9%9A%B6%E9%AD%94%E6%9C%AF%CE%A9%2FIsekai%20Maou%20to%20Shoukan%20Shoujo%20no%20Dorei%20Majutsu%20S2%5D%5B10END%5D%5B720p%5D%5B%E7%AE%80%E4%BD%93%5D%5B%E6%8B%9B%E5%8B%9F%E7%BF%BB%E8%AF%91%E6%A0%A1%E5%AF%B9%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">193.1 MiB</td>
+				<td class="text-center" data-timestamp="1623683706">2021-06-14 15:15</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">143</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398089" title="[YuiSubs] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11  (NVENC H.265 1080p)">[YuiSubs] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11  (NVENC H.265 1080p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398089.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:34879f2c3539261e0054edf49af0b5bacf798a6c&amp;dn=%5BYuiSubs%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%20%28NVENC%20H.265%201080p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">433.6 MiB</td>
+				<td class="text-center" data-timestamp="1623683621">2021-06-14 15:13</td>
+
+				<td class="text-center">4</td>
+				<td class="text-center">0</td>
+				<td class="text-center">180</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398088" title="[KRP] Fumetsu no Anata e - 10 (NHKE 1280x720 x264 AAC).mkv">[KRP] Fumetsu no Anata e - 10 (NHKE 1280x720 x264 AAC).mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398088.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:6e96f4dda5bcec1b2a0d420127fd60a1b0046fc6&amp;dn=%5BKRP%5D%20Fumetsu%20no%20Anata%20e%20-%2010%20%28NHKE%201280x720%20x264%20AAC%29.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">270.7 MiB</td>
+				<td class="text-center" data-timestamp="1623683584">2021-06-14 15:13</td>
+
+				<td class="text-center">41</td>
+				<td class="text-center">0</td>
+				<td class="text-center">362</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398087#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1398087" title="[EMBER] Koi to Yobu ni wa Kimochi Warui (2021) (Season 1) [1080p] [HEVC WEBRip] (It's Too Sick to Call this Love | Koikimo)">[EMBER] Koi to Yobu ni wa Kimochi Warui (2021) (Season 1) [1080p] [HEVC WEBRip] (It's Too Sick to Call this Love | Koikimo)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398087.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:9b1c6bceabcad02db537d497e2a63527b60f0523&amp;dn=%5BEMBER%5D%20Koi%20to%20Yobu%20ni%20wa%20Kimochi%20Warui%20%282021%29%20%28Season%201%29%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D%20%28It%27s%20Too%20Sick%20to%20Call%20this%20Love%20%7C%20Koikimo%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">3.1 GiB</td>
+				<td class="text-center" data-timestamp="1623683575">2021-06-14 15:12</td>
+
+				<td class="text-center">18</td>
+				<td class="text-center">4</td>
+				<td class="text-center">177</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398086" title="[SSA] Yakunara Mug Cup mo - 11 [1080p].mkv">[SSA] Yakunara Mug Cup mo - 11 [1080p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398086.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:c2808341a00f0d9e302ab9c2a7c57db839364ff5&amp;dn=%5BSSA%5D%20Yakunara%20Mug%20Cup%20mo%20-%2011%20%5B1080p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">94.1 MiB</td>
+				<td class="text-center" data-timestamp="1623683525">2021-06-14 15:12</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">0</td>
+				<td class="text-center">121</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398085" title="[EMBER] Koi to Yobu ni wa Kimochi Warui S01E12 [1080p] [HEVC WEBRip] (It's Too Sick to Call this Love | Koikimo)">[EMBER] Koi to Yobu ni wa Kimochi Warui S01E12 [1080p] [HEVC WEBRip] (It's Too Sick to Call this Love | Koikimo)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398085.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:1a82aaeb61e9ce8b767aec89247c6793c14b734d&amp;dn=%5BEMBER%5D%20Koi%20to%20Yobu%20ni%20wa%20Kimochi%20Warui%20S01E12%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D%20%28It%27s%20Too%20Sick%20to%20Call%20this%20Love%20%7C%20Koikimo%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">246.5 MiB</td>
+				<td class="text-center" data-timestamp="1623683492">2021-06-14 15:11</td>
+
+				<td class="text-center">14</td>
+				<td class="text-center">0</td>
+				<td class="text-center">327</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398084" title="Higehiro - 11 VOSTFR 720p WEB x264 -NanDesuKa (CR).mkv">Higehiro - 11 VOSTFR 720p WEB x264 -NanDesuKa (CR).mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398084.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:b87476468c126e673b105f7fb9bf0ee4f6625015&amp;dn=Higehiro%20-%2011%20VOSTFR%20720p%20WEB%20x264%20-NanDesuKa%20%28CR%29.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">723.4 MiB</td>
+				<td class="text-center" data-timestamp="1623683079">2021-06-14 15:04</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">0</td>
+				<td class="text-center">64</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398083" title="[NC-Raws] 当我刮掉胡子时，会发生什么事 / Hige Hirou. - 11 [B-Global][WEB-DL][1080p][AVC AAC][ENG_TH_SRT][MKV]">[NC-Raws] 当我刮掉胡子时，会发生什么事 / Hige Hirou. - 11 [B-Global][WEB-DL][1080p][AVC AAC][ENG_TH_SRT][MKV]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398083.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:df3ff4b9f138d3a6e6cbb2e655a9be5afe846a33&amp;dn=%5BNC-Raws%5D%20%E5%BD%93%E6%88%91%E5%88%AE%E6%8E%89%E8%83%A1%E5%AD%90%E6%97%B6%EF%BC%8C%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88%E4%BA%8B%20%2F%20Hige%20Hirou.%20-%2011%20%5BB-Global%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BENG_TH_SRT%5D%5BMKV%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.0 GiB</td>
+				<td class="text-center" data-timestamp="1623683041">2021-06-14 15:04</td>
+
+				<td class="text-center">7</td>
+				<td class="text-center">1</td>
+				<td class="text-center">141</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398082" title="[PuyaSubs!] Hige wo Soru - Soshite Joshikousei wo Hirou - 11 [ESP-ENG][720p][DF3CEACD].mkv">[PuyaSubs!] Hige wo Soru - Soshite Joshikousei wo Hirou - 11 [ESP-ENG][720p][DF3CEACD].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398082.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:9a35240c037d2af4f649501dcfbdb3c457df4b33&amp;dn=%5BPuyaSubs%21%5D%20Hige%20wo%20Soru%20-%20Soshite%20Joshikousei%20wo%20Hirou%20-%2011%20%5BESP-ENG%5D%5B720p%5D%5BDF3CEACD%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">698.7 MiB</td>
+				<td class="text-center" data-timestamp="1623683019">2021-06-14 15:03</td>
+
+				<td class="text-center">9</td>
+				<td class="text-center">0</td>
+				<td class="text-center">203</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398081" title="Higehiro - 11 VOSTFR 1080p WEB x264 -NanDesuKa (CR).mkv">Higehiro - 11 VOSTFR 1080p WEB x264 -NanDesuKa (CR).mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398081.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:ba71d3a1a37fbe96f266528974de7baaf51b1df2&amp;dn=Higehiro%20-%2011%20VOSTFR%201080p%20WEB%20x264%20-NanDesuKa%20%28CR%29.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.4 GiB</td>
+				<td class="text-center" data-timestamp="1623683007">2021-06-14 15:03</td>
+
+				<td class="text-center">17</td>
+				<td class="text-center">0</td>
+				<td class="text-center">191</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_1" title="Literature - English-translated">
+						<img src="/static/img/icons/nyaa/3_1.png" alt="Literature - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398080" title="GHOST REAPER GIRL 022 (2021) (Digital) (anadius)">GHOST REAPER GIRL 022 (2021) (Digital) (anadius)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398080.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:3a226d0ff09870fc57f7898d01791c7ee84751a8&amp;dn=GHOST%20REAPER%20GIRL%20022%20%282021%29%20%28Digital%29%20%28anadius%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">8.4 MiB</td>
+				<td class="text-center" data-timestamp="1623682956">2021-06-14 15:02</td>
+
+				<td class="text-center">4</td>
+				<td class="text-center">0</td>
+				<td class="text-center">97</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398079" title="[PuyaSubs!] Hige wo Soru - Soshite Joshikousei wo Hirou - 11 [ESP-ENG][1080p][8E7EC56B].mkv">[PuyaSubs!] Hige wo Soru - Soshite Joshikousei wo Hirou - 11 [ESP-ENG][1080p][8E7EC56B].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398079.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:54a300acd556d8c654620cfd125a4338903263f3&amp;dn=%5BPuyaSubs%21%5D%20Hige%20wo%20Soru%20-%20Soshite%20Joshikousei%20wo%20Hirou%20-%2011%20%5BESP-ENG%5D%5B1080p%5D%5B8E7EC56B%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.3 GiB</td>
+				<td class="text-center" data-timestamp="1623682954">2021-06-14 15:02</td>
+
+				<td class="text-center">21</td>
+				<td class="text-center">1</td>
+				<td class="text-center">289</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_3" title="Literature - Raw">
+						<img src="/static/img/icons/nyaa/3_3.png" alt="Literature - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398078" title="あっ、次の仕事はバケモノ退治です。 第01-03巻 [Atsu Tsugi no Shigoto wa Bakemono Taiji Desu vol 01-03]">あっ、次の仕事はバケモノ退治です。 第01-03巻 [Atsu Tsugi no Shigoto wa Bakemono Taiji Desu vol 01-03]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398078.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:48193d23ffc349e7559ce4cfa1c71fc0f0be3897&amp;dn=%E3%81%82%E3%81%A3%E3%80%81%E6%AC%A1%E3%81%AE%E4%BB%95%E4%BA%8B%E3%81%AF%E3%83%90%E3%82%B1%E3%83%A2%E3%83%8E%E9%80%80%E6%B2%BB%E3%81%A7%E3%81%99%E3%80%82%20%E7%AC%AC01-03%E5%B7%BB%20%5BAtsu%20Tsugi%20no%20Shigoto%20wa%20Bakemono%20Taiji%20Desu%20vol%2001-03%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">130.0 MiB</td>
+				<td class="text-center" data-timestamp="1623682936">2021-06-14 15:02</td>
+
+				<td class="text-center">16</td>
+				<td class="text-center">1</td>
+				<td class="text-center">2179</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398077#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1398077" title="[Erai-raws] Hige o Soru. Soshite Joshikousei o Hirou. - 11 [1080p][Multiple Subtitle].mkv">[Erai-raws] Hige o Soru. Soshite Joshikousei o Hirou. - 11 [1080p][Multiple Subtitle].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398077.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:8bcba7c791b85b2f6f18d3f43e092fcc7ff326f8&amp;dn=%5BErai-raws%5D%20Hige%20o%20Soru.%20Soshite%20Joshikousei%20o%20Hirou.%20-%2011%20%5B1080p%5D%5BMultiple%20Subtitle%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.3 GiB</td>
+				<td class="text-center" data-timestamp="1623682928">2021-06-14 15:02</td>
+
+				<td class="text-center">111</td>
+				<td class="text-center">1</td>
+				<td class="text-center">2005</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398076#comments" class="comments" title="4 comments">
+						<i class="fa fa-comments-o"/>4</a>
+					<a href="/view/1398076" title="[SubsPlease] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 (1080p) [444FCBC9].mkv">[SubsPlease] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 (1080p) [444FCBC9].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398076.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:8debe45abd5d215421af84b6857bff6a064762f8&amp;dn=%5BSubsPlease%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%281080p%29%20%5B444FCBC9%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.3 GiB</td>
+				<td class="text-center" data-timestamp="1623682913">2021-06-14 15:01</td>
+
+				<td class="text-center">320</td>
+				<td class="text-center">4</td>
+				<td class="text-center">5361</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398075#comments" class="comments" title="3 comments">
+						<i class="fa fa-comments-o"/>3</a>
+					<a href="/view/1398075" title="[SubsPlease] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 (720p) [BA8C4424].mkv">[SubsPlease] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 (720p) [BA8C4424].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398075.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:d217cf60135d6d01453648cbed21bf515b413e4b&amp;dn=%5BSubsPlease%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%28720p%29%20%5BBA8C4424%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">704.1 MiB</td>
+				<td class="text-center" data-timestamp="1623682878">2021-06-14 15:01</td>
+
+				<td class="text-center">116</td>
+				<td class="text-center">1</td>
+				<td class="text-center">3126</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398074" title="[NC-Raws] 刮掉鬍子的我與撿到的女高中生 / Hige Hirou. - 11 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]">[NC-Raws] 刮掉鬍子的我與撿到的女高中生 / Hige Hirou. - 11 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398074.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:d9c473e8c3ba7768a234ce39aa573eebbf6a8631&amp;dn=%5BNC-Raws%5D%20%E5%88%AE%E6%8E%89%E9%AC%8D%E5%AD%90%E7%9A%84%E6%88%91%E8%88%87%E6%92%BF%E5%88%B0%E7%9A%84%E5%A5%B3%E9%AB%98%E4%B8%AD%E7%94%9F%20%2F%20Hige%20Hirou.%20-%2011%20%5BBaha%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHT%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">294.6 MiB</td>
+				<td class="text-center" data-timestamp="1623682874">2021-06-14 15:01</td>
+
+				<td class="text-center">11</td>
+				<td class="text-center">0</td>
+				<td class="text-center">892</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398073" title="[Erai-raws] Hige o Soru. Soshite Joshikousei o Hirou. - 11 [720p][Multiple Subtitle].mkv">[Erai-raws] Hige o Soru. Soshite Joshikousei o Hirou. - 11 [720p][Multiple Subtitle].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398073.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:f79b88d251be10e51b92f1d17563220b45e14514&amp;dn=%5BErai-raws%5D%20Hige%20o%20Soru.%20Soshite%20Joshikousei%20o%20Hirou.%20-%2011%20%5B720p%5D%5BMultiple%20Subtitle%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">705.8 MiB</td>
+				<td class="text-center" data-timestamp="1623682860">2021-06-14 15:01</td>
+
+				<td class="text-center">44</td>
+				<td class="text-center">3</td>
+				<td class="text-center">1394</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398072" title="[SubsPlease] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 (480p) [8E39E2A9].mkv">[SubsPlease] Hige wo Soru. Soshite Joshikousei wo Hirou. - 11 (480p) [8E39E2A9].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398072.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:95b3dc281e29271167739c7c0692c95c4cc7074a&amp;dn=%5BSubsPlease%5D%20Hige%20wo%20Soru.%20Soshite%20Joshikousei%20wo%20Hirou.%20-%2011%20%28480p%29%20%5B8E39E2A9%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">360.5 MiB</td>
+				<td class="text-center" data-timestamp="1623682857">2021-06-14 15:00</td>
+
+				<td class="text-center">26</td>
+				<td class="text-center">0</td>
+				<td class="text-center">785</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398071" title="[Erai-raws] Hige o Soru. Soshite Joshikousei o Hirou. - 11 [480p][Multiple Subtitle].mkv">[Erai-raws] Hige o Soru. Soshite Joshikousei o Hirou. - 11 [480p][Multiple Subtitle].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398071.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:839085611ea6a6fb6a8fbcb139b454a5f330bf01&amp;dn=%5BErai-raws%5D%20Hige%20o%20Soru.%20Soshite%20Joshikousei%20o%20Hirou.%20-%2011%20%5B480p%5D%5BMultiple%20Subtitle%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">362.2 MiB</td>
+				<td class="text-center" data-timestamp="1623682835">2021-06-14 15:00</td>
+
+				<td class="text-center">7</td>
+				<td class="text-center">0</td>
+				<td class="text-center">359</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398070" title="[星空字幕組][甜夢貓 Mix! / Mewkledreamy Mix!][10][繁日內嵌][720P][TVRip][MP4]">[星空字幕組][甜夢貓 Mix! / Mewkledreamy Mix!][10][繁日內嵌][720P][TVRip][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398070.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:45e098f89e99e02b334c977127e44566ee689f8b&amp;dn=%5B%E6%98%9F%E7%A9%BA%E5%AD%97%E5%B9%95%E7%B5%84%5D%5B%E7%94%9C%E5%A4%A2%E8%B2%93%20Mix%21%20%2F%20Mewkledreamy%20Mix%21%5D%5B10%5D%5B%E7%B9%81%E6%97%A5%E5%85%A7%E5%B5%8C%5D%5B720P%5D%5BTVRip%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">293.4 MiB</td>
+				<td class="text-center" data-timestamp="1623682726">2021-06-14 14:58</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">0</td>
+				<td class="text-center">93</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398069" title="[星空字幕组][甜梦猫 Mix! / Mewkledreamy Mix!][10][简日内嵌][720P][TVRip][MP4]">[星空字幕组][甜梦猫 Mix! / Mewkledreamy Mix!][10][简日内嵌][720P][TVRip][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398069.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:25f9b769695667c885e06f2af81253fdd0081c4f&amp;dn=%5B%E6%98%9F%E7%A9%BA%E5%AD%97%E5%B9%95%E7%BB%84%5D%5B%E7%94%9C%E6%A2%A6%E7%8C%AB%20Mix%21%20%2F%20Mewkledreamy%20Mix%21%5D%5B10%5D%5B%E7%AE%80%E6%97%A5%E5%86%85%E5%B5%8C%5D%5B720P%5D%5BTVRip%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">293.4 MiB</td>
+				<td class="text-center" data-timestamp="1623682714">2021-06-14 14:58</td>
+
+				<td class="text-center">1</td>
+				<td class="text-center">0</td>
+				<td class="text-center">37</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398068" title="[CameEsp] Yakunara Mug Cup mo - 11 [ESP-es, ESP-la y ENG] (720p)">[CameEsp] Yakunara Mug Cup mo - 11 [ESP-es, ESP-la y ENG] (720p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398068.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:35b7284608a36d6833462221183a54e016f4dcd8&amp;dn=%5BCameEsp%5D%20Yakunara%20Mug%20Cup%20mo%20-%2011%20%5BESP-es%2C%20ESP-la%20y%20ENG%5D%20%28720p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">439.6 MiB</td>
+				<td class="text-center" data-timestamp="1623682713">2021-06-14 14:58</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">0</td>
+				<td class="text-center">2</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398067" title="[CameEsp] Yakunara Mug Cup mo - 11 [ESP-es, ESP-la y ENG] (1080p)">[CameEsp] Yakunara Mug Cup mo - 11 [ESP-es, ESP-la y ENG] (1080p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398067.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:5db9a294ee67b1414b9d396850d02ce1836fc678&amp;dn=%5BCameEsp%5D%20Yakunara%20Mug%20Cup%20mo%20-%2011%20%5BESP-es%2C%20ESP-la%20y%20ENG%5D%20%281080p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">859.3 MiB</td>
+				<td class="text-center" data-timestamp="1623682688">2021-06-14 14:58</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">0</td>
+				<td class="text-center">6</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398066" title="[豌豆字幕组&amp;LoliHouse] 王者天下 第三季 / Kingdom S3 - 11 [WebRip 1080p HEVC-10bit AAC][简繁内封字幕]">[豌豆字幕组&amp;LoliHouse] 王者天下 第三季 / Kingdom S3 - 11 [WebRip 1080p HEVC-10bit AAC][简繁内封字幕]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398066.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:0547a06bf0e940030f86973556e5c5084fd63997&amp;dn=%5B%E8%B1%8C%E8%B1%86%E5%AD%97%E5%B9%95%E7%BB%84%26LoliHouse%5D%20%E7%8E%8B%E8%80%85%E5%A4%A9%E4%B8%8B%20%E7%AC%AC%E4%B8%89%E5%AD%A3%20%2F%20Kingdom%20S3%20-%2011%20%5BWebRip%201080p%20HEVC-10bit%20AAC%5D%5B%E7%AE%80%E7%B9%81%E5%86%85%E5%B0%81%E5%AD%97%E5%B9%95%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">696.4 MiB</td>
+				<td class="text-center" data-timestamp="1623682570">2021-06-14 14:56</td>
+
+				<td class="text-center">6</td>
+				<td class="text-center">0</td>
+				<td class="text-center">112</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398065" title="[Sick-Fansubs] One Piece 978 [720p][FB5953D6].mp4">[Sick-Fansubs] One Piece 978 [720p][FB5953D6].mp4</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398065.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:8d07cb169f88bb150b2a17ec3f96b82dadbe2967&amp;dn=%5BSick-Fansubs%5D%20One%20Piece%20978%20%5B720p%5D%5BFB5953D6%5D.mp4&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">397.7 MiB</td>
+				<td class="text-center" data-timestamp="1623682482">2021-06-14 14:54</td>
+
+				<td class="text-center">32</td>
+				<td class="text-center">0</td>
+				<td class="text-center">360</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398064" title="[Sick-Fansubs] One Piece 977v2 [720p][A97D00BE].mp4">[Sick-Fansubs] One Piece 977v2 [720p][A97D00BE].mp4</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398064.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:fe0e13c43ca7d1f287c2f4c23e8dd37e7eb95c08&amp;dn=%5BSick-Fansubs%5D%20One%20Piece%20977v2%20%5B720p%5D%5BA97D00BE%5D.mp4&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">397.7 MiB</td>
+				<td class="text-center" data-timestamp="1623682332">2021-06-14 14:52</td>
+
+				<td class="text-center">11</td>
+				<td class="text-center">0</td>
+				<td class="text-center">124</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398063#comments" class="comments" title="9 comments">
+						<i class="fa fa-comments-o"/>9</a>
+					<a href="/view/1398063" title="[VipapkStudios] Juan Si Liang - The Island of Siliang | 01 | (1080p) | [x264]">[VipapkStudios] Juan Si Liang - The Island of Siliang | 01 | (1080p) | [x264]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398063.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:9b9ee06cd47c103340d40c8d3ba866c0cd258703&amp;dn=%5BVipapkStudios%5D%20Juan%20Si%20Liang%20-%20The%20Island%20of%20Siliang%20%7C%2001%20%7C%20%281080p%29%20%7C%20%5Bx264%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">582.4 MiB</td>
+				<td class="text-center" data-timestamp="1623682319">2021-06-14 14:51</td>
+
+				<td class="text-center">4</td>
+				<td class="text-center">0</td>
+				<td class="text-center">39</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398061" title="[Ohys-Raws] Fumetsu no Anata e - 10 (NHKE 1280x720 x264 AAC).mp4">[Ohys-Raws] Fumetsu no Anata e - 10 (NHKE 1280x720 x264 AAC).mp4</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398061.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:af10b5840fb8c12cd6ae08d4d567a3b93d04f49d&amp;dn=%5BOhys-Raws%5D%20Fumetsu%20no%20Anata%20e%20-%2010%20%28NHKE%201280x720%20x264%20AAC%29.mp4&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">271.0 MiB</td>
+				<td class="text-center" data-timestamp="1623682234">2021-06-14 14:50</td>
+
+				<td class="text-center">55</td>
+				<td class="text-center">1</td>
+				<td class="text-center">4595</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398059" title="【悠哈璃羽字幕社】[持續狩獵史萊姆三百年，不知不覺就練到LV MAX_Slime Taoshite 300-nen][09][x264 1080p][繁日雙語]">【悠哈璃羽字幕社】[持續狩獵史萊姆三百年，不知不覺就練到LV MAX_Slime Taoshite 300-nen][09][x264 1080p][繁日雙語]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398059.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:1cd43eb785b151f45e1e68c813919e5b3facc885&amp;dn=%E3%80%90%E6%82%A0%E5%93%88%E7%92%83%E7%BE%BD%E5%AD%97%E5%B9%95%E7%A4%BE%E3%80%91%5B%E6%8C%81%E7%BA%8C%E7%8B%A9%E7%8D%B5%E5%8F%B2%E8%90%8A%E5%A7%86%E4%B8%89%E7%99%BE%E5%B9%B4%EF%BC%8C%E4%B8%8D%E7%9F%A5%E4%B8%8D%E8%A6%BA%E5%B0%B1%E7%B7%B4%E5%88%B0LV%20MAX_Slime%20Taoshite%20300-nen%5D%5B09%5D%5Bx264%201080p%5D%5B%E7%B9%81%E6%97%A5%E9%9B%99%E8%AA%9E%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">469.1 MiB</td>
+				<td class="text-center" data-timestamp="1623682029">2021-06-14 14:47</td>
+
+				<td class="text-center">9</td>
+				<td class="text-center">0</td>
+				<td class="text-center">245</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398058" title="【悠哈璃羽字幕社】[打了300年的史莱姆，不知不觉就练到了满级_Slime Taoshite 300-nen][09][x264 1080p][简日双语]">【悠哈璃羽字幕社】[打了300年的史莱姆，不知不觉就练到了满级_Slime Taoshite 300-nen][09][x264 1080p][简日双语]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398058.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:35aac73c6b2768c0753dd058328e5594f0c8e244&amp;dn=%E3%80%90%E6%82%A0%E5%93%88%E7%92%83%E7%BE%BD%E5%AD%97%E5%B9%95%E7%A4%BE%E3%80%91%5B%E6%89%93%E4%BA%86300%E5%B9%B4%E7%9A%84%E5%8F%B2%E8%8E%B1%E5%A7%86%EF%BC%8C%E4%B8%8D%E7%9F%A5%E4%B8%8D%E8%A7%89%E5%B0%B1%E7%BB%83%E5%88%B0%E4%BA%86%E6%BB%A1%E7%BA%A7_Slime%20Taoshite%20300-nen%5D%5B09%5D%5Bx264%201080p%5D%5B%E7%AE%80%E6%97%A5%E5%8F%8C%E8%AF%AD%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">468.7 MiB</td>
+				<td class="text-center" data-timestamp="1623682010">2021-06-14 14:46</td>
+
+				<td class="text-center">11</td>
+				<td class="text-center">1</td>
+				<td class="text-center">144</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1398057#comments" class="comments" title="4 comments">
+						<i class="fa fa-comments-o"/>4</a>
+					<a href="/view/1398057" title="[Desu is dead] Super Dragon Ball Heroes Big Bang Mission Episode 14 (SDBH Episode 35) [1080p]">[Desu is dead] Super Dragon Ball Heroes Big Bang Mission Episode 14 (SDBH Episode 35) [1080p]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1398057.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:03cc9ac605a2f08a80da52a8a994353a2fde5054&amp;dn=%5BDesu%20is%20dead%5D%20Super%20Dragon%20Ball%20Heroes%20Big%20Bang%20Mission%20Episode%2014%20%28SDBH%20Episode%2035%29%20%5B1080p%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">198.8 MiB</td>
+				<td class="text-center" data-timestamp="1623681764">2021-06-14 14:42</td>
+
+				<td class="text-center">25</td>
+				<td class="text-center">0</td>
+				<td class="text-center">644</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="center">
+	<nav>
+  <ul class="pagination">
+    <li><a rel="prev" href="/?p=98">«</a></li>
+        <li><a href="/?p=1">1</a></li>
+        <li><a href="/?p=2">2</a></li>
+      <li class="disabled"><a href="#">…</a></li>
+        <li><a href="/?p=93">93</a></li>
+        <li><a href="/?p=94">94</a></li>
+        <li><a href="/?p=95">95</a></li>
+        <li><a href="/?p=96">96</a></li>
+        <li><a href="/?p=97">97</a></li>
+        <li><a href="/?p=98">98</a></li>
+        <li class="active"><a href="#">99 <span class="sr-only">(current)</span></a></li>
+        <li><a href="/?p=100">100</a></li>
+
+    <li><a rel="next" href="/?p=100">»</a></li>
+</ul>
+</nav>
+
+</div>
+		</div> <!-- /container -->
+
+		<footer style="text-align: center;">
+			<p>Dark Mode: <a href="#" id="themeToggle">Toggle</a></p>
+		</footer>
+	</body>

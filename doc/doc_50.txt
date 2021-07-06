@@ -1,0 +1,1923 @@
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Browse :: Nyaa</title>
+
+		<meta name="viewport" content="width=480px"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<link rel="shortcut icon" type="image/png" href="/static/favicon.png"/>
+		<link rel="icon" type="image/png" href="/static/favicon.png"/>
+		<link rel="mask-icon" href="/static/pinned-tab.svg" color="#3582F7"/>
+		<link rel="alternate" type="application/rss+xml" href="https://nyaa.si/?page=rss"/>
+
+		<meta property="og:site_name" content="Nyaa"/>
+		<meta property="og:title" content="Browse :: Nyaa"/>
+		<meta property="og:image" content="/static/img/avatar/default.png"/>
+<meta name="description" content="A BitTorrent community focused on Eastern Asian media including anime, manga, music, and more"/>
+<meta name="keywords" content="torrents, bittorrent, torrent, anime, manga, sukebei, download, nyaa, magnet, magnets"/>
+<meta property="og:description" content="Nyaa homepage"/>
+
+		<!-- Bootstrap core CSS -->
+		<!--
+			Note: This has been customized at http://getbootstrap.com/customize/ to
+			set the column breakpoint to tablet mode, instead of mobile. This is to
+			make the navbar not look awful on tablets.
+		-->
+		<link href="/static/css/bootstrap.min.css?t=1608007388" rel="stylesheet" id="bsThemeLink"/>
+		<link href="/static/css/bootstrap-xl-mod.css?t=1608007388" rel="stylesheet"/>
+		<!--
+			This theme changer script needs to be inline and right under the above stylesheet link to prevent FOUC (Flash Of Unstyled Content)
+			Development version is commented out in static/js/main.js at the bottom of the file
+		-->
+		<script>function toggleDarkMode(){"dark"===localStorage.getItem("theme")?setThemeLight():setThemeDark()}function setThemeDark(){bsThemeLink.href="/static/css/bootstrap-dark.min.css?t=1608007388",localStorage.setItem("theme","dark"),document.body!==null&amp;&amp;document.body.classList.add('dark')}function setThemeLight(){bsThemeLink.href="/static/css/bootstrap.min.css?t=1608007388",localStorage.setItem("theme","light"),document.body!==null&amp;&amp;document.body.classList.remove('dark')}if("undefined"!=typeof Storage){var bsThemeLink=document.getElementById("bsThemeLink");"dark"===localStorage.getItem("theme")&amp;&amp;setThemeDark()}</script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css" integrity="sha256-an4uqLnVJ2flr7w0U74xiF4PJjO2N5Df91R2CUmCLCA=" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"/>
+
+		<!-- Custom styles for this template -->
+		<link href="/static/css/main.css?t=1608007388" rel="stylesheet"/>
+
+		<!-- Core JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.3.1/markdown-it.min.js" integrity="sha256-3WZyZQOe+ql3pLo90lrkRtALrlniGdnf//gRpW0UQks=" crossorigin="anonymous"/>
+		<!-- Modified to not apply border-radius to selectpickers and stuff so our navbar looks cool -->
+		<script src="/static/js/bootstrap-select.min.js?t=1623304983"/>
+		<script src="/static/js/main.min.js?t=1623304983"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="search" type="application/opensearchdescription+xml" title="Nyaa.si" href="/static/search.xml"/>
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"/>
+					<span class="icon-bar"/>
+					<span class="icon-bar"/>
+					</button>
+					<a class="navbar-brand" href="/">Nyaa</a>
+				</div><!--/.navbar-header -->
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/upload">Upload</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								Info
+								<span class="caret"/>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="/rules">Rules</a></li>
+								<li><a href="/help">Help</a></li>
+							</ul>
+						</li>
+						<li><a href="/?page=rss">RSS</a></li>
+						<li><a href="https://twitter.com/NyaaV2">Twitter</a></li>
+						<li><a href="//sukebei.nyaa.si">Fap</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle visible-lg visible-sm visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-user fa-fw"/>
+								Guest
+								<span class="caret"/>
+							</a>
+							<a href="#" class="dropdown-toggle hidden-lg hidden-sm hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-user fa-fw"/>
+								<span class="caret"/>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/login">
+										<i class="fa fa-sign-in fa-fw"/>
+										Login
+									</a>
+								</li>
+								<li>
+									<a href="/register">
+										<i class="fa fa-pencil fa-fw"/>
+										Register
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+
+
+					<div class="search-container visible-xs visible-sm">
+						<form class="navbar-form navbar-right form" action="/" method="get">
+
+							<input type="text" class="form-control" name="q" placeholder="Search..." value=""/>
+							<br/>
+
+							<select class="form-control" title="Filter" data-width="120px" name="f">
+								<option value="0" title="No filter" selected="selected">No filter</option>
+								<option value="1" title="No remakes">No remakes</option>
+								<option value="2" title="Trusted only">Trusted only</option>
+							</select>
+
+							<br/>
+
+							<select class="form-control" title="Category" data-width="200px" name="c">
+								<option value="0_0" title="All categories" selected="selected">
+									All categories
+								</option>
+								<option value="1_0" title="Anime">
+									Anime
+								</option>
+								<option value="1_1" title="Anime - AMV">
+									- Anime Music Video
+								</option>
+								<option value="1_2" title="Anime - English">
+									- English-translated
+								</option>
+								<option value="1_3" title="Anime - Non-English">
+									- Non-English-translated
+								</option>
+								<option value="1_4" title="Anime - Raw">
+									- Raw
+								</option>
+								<option value="2_0" title="Audio">
+									Audio
+								</option>
+								<option value="2_1" title="Audio - Lossless">
+									- Lossless
+								</option>
+								<option value="2_2" title="Audio - Lossy">
+									- Lossy
+								</option>
+								<option value="3_0" title="Literature">
+									Literature
+								</option>
+								<option value="3_1" title="Literature - English">
+									- English-translated
+								</option>
+								<option value="3_2" title="Literature - Non-English">
+									- Non-English-translated
+								</option>
+								<option value="3_3" title="Literature - Raw">
+									- Raw
+								</option>
+								<option value="4_0" title="Live Action">
+									Live Action
+								</option>
+								<option value="4_1" title="Live Action - English">
+									- English-translated
+								</option>
+								<option value="4_2" title="Live Action - Idol/PV">
+									- Idol/Promotional Video
+								</option>
+								<option value="4_3" title="Live Action - Non-English">
+									- Non-English-translated
+								</option>
+								<option value="4_4" title="Live Action - Raw">
+									- Raw
+								</option>
+								<option value="5_0" title="Pictures">
+									Pictures
+								</option>
+								<option value="5_1" title="Pictures - Graphics">
+									- Graphics
+								</option>
+								<option value="5_2" title="Pictures - Photos">
+									- Photos
+								</option>
+								<option value="6_0" title="Software">
+									Software
+								</option>
+								<option value="6_1" title="Software - Apps">
+									- Applications
+								</option>
+								<option value="6_2" title="Software - Games">
+									- Games
+								</option>
+							</select>
+
+							<br/>
+
+							<button class="btn btn-primary form-control" type="submit">
+								<i class="fa fa-search fa-fw"/> Search
+							</button>
+						</form>
+					</div><!--/.search-container -->
+
+					<form class="navbar-form navbar-right form" action="/" method="get">
+						<div class="input-group search-container hidden-xs hidden-sm">
+							<div class="input-group-btn nav-filter" id="navFilter-criteria">
+								<select class="selectpicker show-tick" title="Filter" data-width="120px" name="f">
+									<option value="0" title="No filter" selected="selected">No filter</option>
+									<option value="1" title="No remakes">No remakes</option>
+									<option value="2" title="Trusted only">Trusted only</option>
+								</select>
+							</div>
+
+							<div class="input-group-btn nav-filter" id="navFilter-category">
+								<!--
+									On narrow viewports, there isn't enough room to fit the full stuff in the selectpicker, so we show a full-width one on wide viewports, but squish it on narrow ones.
+								-->
+								<select class="selectpicker show-tick" title="Category" data-width="130px" name="c">
+									<option value="0_0" title="All categories" selected="selected">
+										All categories
+									</option>
+									<option value="1_0" title="Anime">
+										Anime
+									</option>
+									<option value="1_1" title="Anime - AMV">
+										- Anime Music Video
+									</option>
+									<option value="1_2" title="Anime - English">
+										- English-translated
+									</option>
+									<option value="1_3" title="Anime - Non-English">
+										- Non-English-translated
+									</option>
+									<option value="1_4" title="Anime - Raw">
+										- Raw
+									</option>
+									<option value="2_0" title="Audio">
+										Audio
+									</option>
+									<option value="2_1" title="Audio - Lossless">
+										- Lossless
+									</option>
+									<option value="2_2" title="Audio - Lossy">
+										- Lossy
+									</option>
+									<option value="3_0" title="Literature">
+										Literature
+									</option>
+									<option value="3_1" title="Literature - English">
+										- English-translated
+									</option>
+									<option value="3_2" title="Literature - Non-English">
+										- Non-English-translated
+									</option>
+									<option value="3_3" title="Literature - Raw">
+										- Raw
+									</option>
+									<option value="4_0" title="Live Action">
+										Live Action
+									</option>
+									<option value="4_1" title="Live Action - English">
+										- English-translated
+									</option>
+									<option value="4_2" title="Live Action - Idol/PV">
+										- Idol/Promotional Video
+									</option>
+									<option value="4_3" title="Live Action - Non-English">
+										- Non-English-translated
+									</option>
+									<option value="4_4" title="Live Action - Raw">
+										- Raw
+									</option>
+									<option value="5_0" title="Pictures">
+										Pictures
+									</option>
+									<option value="5_1" title="Pictures - Graphics">
+										- Graphics
+									</option>
+									<option value="5_2" title="Pictures - Photos">
+										- Photos
+									</option>
+									<option value="6_0" title="Software">
+										Software
+									</option>
+									<option value="6_1" title="Software - Apps">
+										- Applications
+									</option>
+									<option value="6_2" title="Software - Games">
+										- Games
+									</option>
+								</select>
+							</div>
+							<input type="text" class="form-control search-bar" name="q" placeholder="Search..." value=""/>
+							<div class="input-group-btn search-btn">
+								<button class="btn btn-primary" type="submit">
+									<i class="fa fa-search fa-fw"/>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div><!--/.nav-collapse -->
+			</div><!--/.container -->
+		</nav>
+
+		<div class="container">
+
+
+
+
+
+<div class="table-responsive">
+	<table class="table table-bordered table-hover table-striped torrent-list">
+		<thead>
+			<tr>
+				<th class="hdr-category text-center" style="width:80px;">Category</th>
+				<th class="hdr-name" style="width:auto;">Name</th>
+				<th class="hdr-comments sorting text-center" title="Comments" style="width:50px;"><a href="/?s=comments&amp;o=desc"/><i class="fa fa-comments-o"/></th>
+				<th class="hdr-link text-center" style="width:70px;">Link</th>
+				<th class="hdr-size sorting text-center" style="width:100px;"><a href="/?s=size&amp;o=desc"/>Size</th>
+				<th class="hdr-date sorting_desc text-center" title="In UTC" style="width:140px;"><a href="/?s=id&amp;o=asc"/>Date</th>
+
+				<th class="hdr-seeders sorting text-center" title="Seeders" style="width:50px;"><a href="/?s=seeders&amp;o=desc"/><i class="fa fa-arrow-up" aria-hidden="true"/></th>
+				<th class="hdr-leechers sorting text-center" title="Leechers" style="width:50px;"><a href="/?s=leechers&amp;o=desc"/><i class="fa fa-arrow-down" aria-hidden="true"/></th>
+				<th class="hdr-downloads sorting text-center" title="Completed downloads" style="width:50px;"><a href="/?s=downloads&amp;o=desc"/><i class="fa fa-check" aria-hidden="true"/></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402057" title="German Anime Mini Pack">German Anime Mini Pack</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402057.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:982db15c71dc5850af13b8306710feab9f0cf104&amp;dn=German%20Anime%20Mini%20Pack&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.6 MiB</td>
+				<td class="text-center" data-timestamp="1624545290">2021-06-24 14:34</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">0</td>
+				<td class="text-center">6</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402056" title="[Ohys-Raws] Fairy Ranmaru Anata no Kokoro Otasuke Shimasu - 12 END (AT-X 1280x720 x264 AAC).mp4">[Ohys-Raws] Fairy Ranmaru Anata no Kokoro Otasuke Shimasu - 12 END (AT-X 1280x720 x264 AAC).mp4</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402056.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:87cd80b9caacd2875685342f802c9e1e3679efd3&amp;dn=%5BOhys-Raws%5D%20Fairy%20Ranmaru%20Anata%20no%20Kokoro%20Otasuke%20Shimasu%20-%2012%20END%20%28AT-X%201280x720%20x264%20AAC%29.mp4&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">577.0 MiB</td>
+				<td class="text-center" data-timestamp="1624545177">2021-06-24 14:32</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">0</td>
+				<td class="text-center">1160</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402055#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1402055" title="[Hentai-Subs] Dokyuu Hentai HxEros OP and ED (BDRip 1920x1080 x264 FLAC)">[Hentai-Subs] Dokyuu Hentai HxEros OP and ED (BDRip 1920x1080 x264 FLAC)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402055.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:ecd24708d6a21c00d85a46bbabd6167b41588d11&amp;dn=%5BHentai-Subs%5D%20Dokyuu%20Hentai%20HxEros%20OP%20and%20ED%20%28BDRip%201920x1080%20x264%20FLAC%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">186.0 MiB</td>
+				<td class="text-center" data-timestamp="1624544754">2021-06-24 14:25</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">0</td>
+				<td class="text-center">57</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402054#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1402054" title="[Tenrai-Sensei | Saint-Subs] Shaman King (2021) - S01E13 - And Hao!  [Web][1080p][AVC x264]">[Tenrai-Sensei | Saint-Subs] Shaman King (2021) - S01E13 - And Hao!  [Web][1080p][AVC x264]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402054.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:daeb4fbd65f541691e56d7634c996205839f7f36&amp;dn=%5BTenrai-Sensei%20%7C%20Saint-Subs%5D%20Shaman%20King%20%282021%29%20-%20S01E13%20-%20And%20Hao%21%20%20%5BWeb%5D%5B1080p%5D%5BAVC%20x264%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">450.8 MiB</td>
+				<td class="text-center" data-timestamp="1624544504">2021-06-24 14:21</td>
+
+				<td class="text-center">215</td>
+				<td class="text-center">2</td>
+				<td class="text-center">3092</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_1" title="Literature - English-translated">
+						<img src="/static/img/icons/nyaa/3_1.png" alt="Literature - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402053#comments" class="comments" title="2 comments">
+						<i class="fa fa-comments-o"/>2</a>
+					<a href="/view/1402053" title="Oya ga Urusai node Kōhai (♀) to Gisō Kekkon Shitemita / I Married My Best Friend To Shut My Parents Up - c000-004x1 (v01) [Seven Seas]">Oya ga Urusai node Kōhai (♀) to Gisō Kekkon Shitemita / I Married My Best Friend To Shut My Parents Up - c000-004x1 (v01) [Seven Seas]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402053.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:4d10a48bd2d37a282f6f08d7d19d1fe24cac8dbe&amp;dn=Oya%20ga%20Urusai%20node%20K%C5%8Dhai%20%28%E2%99%80%29%20to%20Gis%C5%8D%20Kekkon%20Shitemita%20%2F%20I%20Married%20My%20Best%20Friend%20To%20Shut%20My%20Parents%20Up%20-%20c000-004x1%20%28v01%29%20%5BSeven%20Seas%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">255.3 MiB</td>
+				<td class="text-center" data-timestamp="1624544397">2021-06-24 14:19</td>
+
+				<td class="text-center">14</td>
+				<td class="text-center">1</td>
+				<td class="text-center">142</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402052" title="[CameEsp] Seijo no Maryoku wa Bannou Desu - 12 [ESP-es, ESP-la y ENG] (720p)">[CameEsp] Seijo no Maryoku wa Bannou Desu - 12 [ESP-es, ESP-la y ENG] (720p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402052.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:1b55e41484b2a14761b958f4f32dc7a8458bbf6a&amp;dn=%5BCameEsp%5D%20Seijo%20no%20Maryoku%20wa%20Bannou%20Desu%20-%2012%20%5BESP-es%2C%20ESP-la%20y%20ENG%5D%20%28720p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">578.2 MiB</td>
+				<td class="text-center" data-timestamp="1624544129">2021-06-24 14:15</td>
+
+				<td class="text-center">0</td>
+				<td class="text-center">0</td>
+				<td class="text-center">18</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402051" title="[CameEsp] Seijo no Maryoku wa Bannou Desu - 12 [ESP-es, ESP-la y ENG] (1080p)">[CameEsp] Seijo no Maryoku wa Bannou Desu - 12 [ESP-es, ESP-la y ENG] (1080p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402051.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:77bf5f75d2f0ccf03c7d231bc856065dc65370c5&amp;dn=%5BCameEsp%5D%20Seijo%20no%20Maryoku%20wa%20Bannou%20Desu%20-%2012%20%5BESP-es%2C%20ESP-la%20y%20ENG%5D%20%281080p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1002.1 MiB</td>
+				<td class="text-center" data-timestamp="1624544124">2021-06-24 14:15</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">24</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_1" title="Literature - English-translated">
+						<img src="/static/img/icons/nyaa/3_1.png" alt="Literature - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402050#comments" class="comments" title="6 comments">
+						<i class="fa fa-comments-o"/>6</a>
+					<a href="/view/1402050" title="Tantei wa Mou, Shindeiru [LN ~ v01-04] (The Detective Is Already Dead)">Tantei wa Mou, Shindeiru [LN ~ v01-04] (The Detective Is Already Dead)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402050.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:d81d9c86a6fec945db85558dfa0367830641f96d&amp;dn=Tantei%20wa%20Mou%2C%20Shindeiru%20%5BLN%20~%20v01-04%5D%20%28The%20Detective%20Is%20Already%20Dead%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">37.2 MiB</td>
+				<td class="text-center" data-timestamp="1624543592">2021-06-24 14:06</td>
+
+				<td class="text-center">21</td>
+				<td class="text-center">1</td>
+				<td class="text-center">191</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402049#comments" class="comments" title="4 comments">
+						<i class="fa fa-comments-o"/>4</a>
+					<a href="/view/1402049" title="[GJM] Suki ni Naru Sono Shunkan wo. Kokuhaku Jikkou Iinkai (BD 1080p)">[GJM] Suki ni Naru Sono Shunkan wo. Kokuhaku Jikkou Iinkai (BD 1080p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402049.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:2715201b18721a680a13ba14d321025c470a949d&amp;dn=%5BGJM%5D%20Suki%20ni%20Naru%20Sono%20Shunkan%20wo.%20Kokuhaku%20Jikkou%20Iinkai%20%28BD%201080p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">2.2 GiB</td>
+				<td class="text-center" data-timestamp="1624543592">2021-06-24 14:06</td>
+
+				<td class="text-center">30</td>
+				<td class="text-center">2</td>
+				<td class="text-center">188</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=2_2" title="Audio - Lossy">
+						<img src="/static/img/icons/nyaa/2_2.png" alt="Audio - Lossy" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402048#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1402048" title="[마신] [2021.06.25] ゾンビランドサガ リベンジ SAGA.1 SpecIal Disc [MP3 320K]">[마신] [2021.06.25] ゾンビランドサガ リベンジ SAGA.1 SpecIal Disc [MP3 320K]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402048.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:fef05091d65d783b64dbe9630a5328b7a6563de3&amp;dn=%5B%EB%A7%88%EC%8B%A0%5D%20%5B2021.06.25%5D%20%E3%82%BE%E3%83%B3%E3%83%93%E3%83%A9%E3%83%B3%E3%83%89%E3%82%B5%E3%82%AC%20%E3%83%AA%E3%83%99%E3%83%B3%E3%82%B8%20SAGA.1%20SpecIal%20Disc%20%5BMP3%20320K%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">269.7 MiB</td>
+				<td class="text-center" data-timestamp="1624543523">2021-06-24 14:05</td>
+
+				<td class="text-center">23</td>
+				<td class="text-center">2</td>
+				<td class="text-center">1187</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402047" title="[NC-Raws] 舞伎家的料理人 / Maiko-san Chi no Makanai-san - 05 [B-Global][WEB-DL][1080p][AVC AAC][CHS_CHT_TH_SRT][MKV]">[NC-Raws] 舞伎家的料理人 / Maiko-san Chi no Makanai-san - 05 [B-Global][WEB-DL][1080p][AVC AAC][CHS_CHT_TH_SRT][MKV]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402047.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:7b9cde1418986db7768d9236e4a352498d267edd&amp;dn=%5BNC-Raws%5D%20%E8%88%9E%E4%BC%8E%E5%AE%B6%E7%9A%84%E6%96%99%E7%90%86%E4%BA%BA%20%2F%20Maiko-san%20Chi%20no%20Makanai-san%20-%2005%20%5BB-Global%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHS_CHT_TH_SRT%5D%5BMKV%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.1 GiB</td>
+				<td class="text-center" data-timestamp="1624543475">2021-06-24 14:04</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">0</td>
+				<td class="text-center">51</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402046" title="[Lilith-Raws] 舞伎家的料理人 / Maiko-san Chi no Makanai-san - 05 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]">[Lilith-Raws] 舞伎家的料理人 / Maiko-san Chi no Makanai-san - 05 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402046.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:ee97c59305024c6b97ae3e9256cf92b74c09793b&amp;dn=%5BLilith-Raws%5D%20%E8%88%9E%E4%BC%8E%E5%AE%B6%E7%9A%84%E6%96%99%E7%90%86%E4%BA%BA%20%2F%20Maiko-san%20Chi%20no%20Makanai-san%20-%2005%20%5BBaha%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHT%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">409.3 MiB</td>
+				<td class="text-center" data-timestamp="1624543387">2021-06-24 14:03</td>
+
+				<td class="text-center">7</td>
+				<td class="text-center">1</td>
+				<td class="text-center">337</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402045" title="[NC-Raws] 舞伎家的料理人 / Maiko-san Chi no Makanai-san - 05 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]">[NC-Raws] 舞伎家的料理人 / Maiko-san Chi no Makanai-san - 05 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402045.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:03d679b0154bda8e7248d6629d6d0effa1dad321&amp;dn=%5BNC-Raws%5D%20%E8%88%9E%E4%BC%8E%E5%AE%B6%E7%9A%84%E6%96%99%E7%90%86%E4%BA%BA%20%2F%20Maiko-san%20Chi%20no%20Makanai-san%20-%2005%20%5BBaha%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHT%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">409.5 MiB</td>
+				<td class="text-center" data-timestamp="1624543284">2021-06-24 14:01</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">0</td>
+				<td class="text-center">107</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402044" title="[Lilith-Raws] 新妹魔王的契約者 BURST / Shinmai Maou no Testament S02 [01-10][Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]">[Lilith-Raws] 新妹魔王的契約者 BURST / Shinmai Maou no Testament S02 [01-10][Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402044.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:35b532cd4f858c137dcd8329e197cbe75e39a0f5&amp;dn=%5BLilith-Raws%5D%20%E6%96%B0%E5%A6%B9%E9%AD%94%E7%8E%8B%E7%9A%84%E5%A5%91%E7%B4%84%E8%80%85%20BURST%20%2F%20Shinmai%20Maou%20no%20Testament%20S02%20%5B01-10%5D%5BBaha%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHT%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">8.2 GiB</td>
+				<td class="text-center" data-timestamp="1624542709">2021-06-24 13:51</td>
+
+				<td class="text-center">6</td>
+				<td class="text-center">3</td>
+				<td class="text-center">234</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402043#comments" class="comments" title="7 comments">
+						<i class="fa fa-comments-o"/>7</a>
+					<a href="/view/1402043" title="[YameteTomete] Vivy - Fluorite Eye's Song - 12 [1FC11145].mkv">[YameteTomete] Vivy - Fluorite Eye's Song - 12 [1FC11145].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402043.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:f4903067532693e882b800c3cc228dc64ff917a3&amp;dn=%5BYameteTomete%5D%20Vivy%20-%20Fluorite%20Eye%27s%20Song%20-%2012%20%5B1FC11145%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.3 GiB</td>
+				<td class="text-center" data-timestamp="1624542318">2021-06-24 13:45</td>
+
+				<td class="text-center">37</td>
+				<td class="text-center">0</td>
+				<td class="text-center">234</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=4_4" title="Live Action - Raw">
+						<img src="/static/img/icons/nyaa/4_4.png" alt="Live Action - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402042" title="[Ohys-Raws] Love Live! Nijigasaki Gakuen School Idol Doukoukai Live6 (BD 1280x720 x264 AAC).mp4">[Ohys-Raws] Love Live! Nijigasaki Gakuen School Idol Doukoukai Live6 (BD 1280x720 x264 AAC).mp4</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402042.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:3998f00543a61f81c724284fab3f669684f017a9&amp;dn=%5BOhys-Raws%5D%20Love%20Live%21%20Nijigasaki%20Gakuen%20School%20Idol%20Doukoukai%20Live6%20%28BD%201280x720%20x264%20AAC%29.mp4&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">2.1 GiB</td>
+				<td class="text-center" data-timestamp="1624541898">2021-06-24 13:38</td>
+
+				<td class="text-center">8</td>
+				<td class="text-center">3</td>
+				<td class="text-center">326</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=4_4" title="Live Action - Raw">
+						<img src="/static/img/icons/nyaa/4_4.png" alt="Live Action - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402041" title="[Ohys-Raws] Love Live! Nijigasaki Gakuen School Idol Doukoukai Live5 (BD 1280x720 x264 AAC).mp4">[Ohys-Raws] Love Live! Nijigasaki Gakuen School Idol Doukoukai Live5 (BD 1280x720 x264 AAC).mp4</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402041.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:31bd0e83d3ac48dd05d3a62e9781e2ad62486c65&amp;dn=%5BOhys-Raws%5D%20Love%20Live%21%20Nijigasaki%20Gakuen%20School%20Idol%20Doukoukai%20Live5%20%28BD%201280x720%20x264%20AAC%29.mp4&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">2.4 GiB</td>
+				<td class="text-center" data-timestamp="1624541890">2021-06-24 13:38</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">5</td>
+				<td class="text-center">338</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_3" title="Literature - Raw">
+						<img src="/static/img/icons/nyaa/3_3.png" alt="Literature - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402040" title="チャリに乗れない！ 第01-03巻 [Chari ni Norenai vol 01-03]">チャリに乗れない！ 第01-03巻 [Chari ni Norenai vol 01-03]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402040.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:3098704515eb30626deb46c36aadf4e87ccf0a4f&amp;dn=%E3%83%81%E3%83%A3%E3%83%AA%E3%81%AB%E4%B9%97%E3%82%8C%E3%81%AA%E3%81%84%EF%BC%81%20%E7%AC%AC01-03%E5%B7%BB%20%5BChari%20ni%20Norenai%20vol%2001-03%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">125.9 MiB</td>
+				<td class="text-center" data-timestamp="1624541842">2021-06-24 13:37</td>
+
+				<td class="text-center">16</td>
+				<td class="text-center">1</td>
+				<td class="text-center">1119</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402039" title="[Lilith-Raws] 新妹魔王的契約者 / Shinmai Maou no Testament [01-12][Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]">[Lilith-Raws] 新妹魔王的契約者 / Shinmai Maou no Testament [01-12][Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402039.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:4ace4a46ad651b4e1d0a4047feed2f55d8a1eb6e&amp;dn=%5BLilith-Raws%5D%20%E6%96%B0%E5%A6%B9%E9%AD%94%E7%8E%8B%E7%9A%84%E5%A5%91%E7%B4%84%E8%80%85%20%2F%20Shinmai%20Maou%20no%20Testament%20%5B01-12%5D%5BBaha%5D%5BWEB-DL%5D%5B1080p%5D%5BAVC%20AAC%5D%5BCHT%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">9.7 GiB</td>
+				<td class="text-center" data-timestamp="1624541809">2021-06-24 13:36</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">3</td>
+				<td class="text-center">223</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402038" title="[DKB] Super Cub - (Season 1) [1080p][HEVC-265 10bit][Multi-Subs][batch]">[DKB] Super Cub - (Season 1) [1080p][HEVC-265 10bit][Multi-Subs][batch]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402038.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:a70a33fe4bceb406ab29ef0626afe0ff45123d0b&amp;dn=%5BDKB%5D%20Super%20Cub%20-%20%28Season%201%29%20%5B1080p%5D%5BHEVC-265%2010bit%5D%5BMulti-Subs%5D%5Bbatch%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">4.1 GiB</td>
+				<td class="text-center" data-timestamp="1624541662">2021-06-24 13:34</td>
+
+				<td class="text-center">16</td>
+				<td class="text-center">2</td>
+				<td class="text-center">85</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_1" title="Literature - English-translated">
+						<img src="/static/img/icons/nyaa/3_1.png" alt="Literature - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402037#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1402037" title="Suppose a Kid from the Last Dungeon Boonies Moved to a Starter Town v04 (2021) (Digital) (DigitalMangaFan)">Suppose a Kid from the Last Dungeon Boonies Moved to a Starter Town v04 (2021) (Digital) (DigitalMangaFan)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402037.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:2abd4d47ada667753f2deef71991f3de10d5f534&amp;dn=Suppose%20a%20Kid%20from%20the%20Last%20Dungeon%20Boonies%20Moved%20to%20a%20Starter%20Town%20v04%20%282021%29%20%28Digital%29%20%28DigitalMangaFan%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">141.2 MiB</td>
+				<td class="text-center" data-timestamp="1624541445">2021-06-24 13:30</td>
+
+				<td class="text-center">13</td>
+				<td class="text-center">2</td>
+				<td class="text-center">233</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_3" title="Literature - Raw">
+						<img src="/static/img/icons/nyaa/3_3.png" alt="Literature - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402036" title="[kahsfafs][ラノベ] 黙示録アリス 1～3巻 (epub) / [Light Novel] Mokushiroku Alice v01-03 (epub)">[kahsfafs][ラノベ] 黙示録アリス 1～3巻 (epub) / [Light Novel] Mokushiroku Alice v01-03 (epub)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402036.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:8892be63250721c97e23c46c0f5cc4ba036a8771&amp;dn=%5Bkahsfafs%5D%5B%E3%83%A9%E3%83%8E%E3%83%99%5D%20%E9%BB%99%E7%A4%BA%E9%8C%B2%E3%82%A2%E3%83%AA%E3%82%B9%201%EF%BD%9E3%E5%B7%BB%20%28epub%29%20%2F%20%5BLight%20Novel%5D%20Mokushiroku%20Alice%20v01-03%20%28epub%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">23.5 MiB</td>
+				<td class="text-center" data-timestamp="1624541419">2021-06-24 13:30</td>
+
+				<td class="text-center">12</td>
+				<td class="text-center">0</td>
+				<td class="text-center">358</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402035" title="[Ohys-Raws] Hetalia World Stars (AT-X 1280x720 x264 AAC)">[Ohys-Raws] Hetalia World Stars (AT-X 1280x720 x264 AAC)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402035.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:43cb4de886daf946aa094375782e288d751adede&amp;dn=%5BOhys-Raws%5D%20Hetalia%20World%20Stars%20%28AT-X%201280x720%20x264%20AAC%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">871.3 MiB</td>
+				<td class="text-center" data-timestamp="1624541275">2021-06-24 13:27</td>
+
+				<td class="text-center">20</td>
+				<td class="text-center">3</td>
+				<td class="text-center">774</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=4_4" title="Live Action - Raw">
+						<img src="/static/img/icons/nyaa/4_4.png" alt="Live Action - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402032#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1402032" title="ナイト・ドクター 第1話">ナイト・ドクター 第1話</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402032.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:7f25b44d6ff38a2a94e4b7cf3338eb7964c3b63d&amp;dn=%E3%83%8A%E3%82%A4%E3%83%88%E3%83%BB%E3%83%89%E3%82%AF%E3%82%BF%E3%83%BC%20%E7%AC%AC1%E8%A9%B1&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.4 GiB</td>
+				<td class="text-center" data-timestamp="1624540391">2021-06-24 13:13</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">157</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402031#comments" class="comments" title="4 comments">
+						<i class="fa fa-comments-o"/>4</a>
+					<a href="/view/1402031" title="[Xspitfire911] Kimetsu No Yaiba S01 BDRIP 1080p X265 10bit VOSTFR + FILM">[Xspitfire911] Kimetsu No Yaiba S01 BDRIP 1080p X265 10bit VOSTFR + FILM</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402031.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:05eeaf5d18080efe0f48e17665329a957f2e4af1&amp;dn=%5BXspitfire911%5D%20Kimetsu%20No%20Yaiba%20S01%20BDRIP%201080p%20X265%2010bit%20VOSTFR%20%2B%20FILM&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">36.2 GiB</td>
+				<td class="text-center" data-timestamp="1624540343">2021-06-24 13:12</td>
+
+				<td class="text-center">8</td>
+				<td class="text-center">2</td>
+				<td class="text-center">20</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402030" title="[FunArts] Super Cub (01 - 12) (1080p) [ESP - ENG] [H.264 10Bit AAC][BATCH]">[FunArts] Super Cub (01 - 12) (1080p) [ESP - ENG] [H.264 10Bit AAC][BATCH]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402030.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:2aa000b403ee1e365a3f1e4e9037c343348805d4&amp;dn=%5BFunArts%5D%20Super%20Cub%20%2801%20-%2012%29%20%281080p%29%20%5BESP%20-%20ENG%5D%20%5BH.264%2010Bit%20AAC%5D%5BBATCH%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">2.9 GiB</td>
+				<td class="text-center" data-timestamp="1624539845">2021-06-24 13:04</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">0</td>
+				<td class="text-center">42</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402029" title="[FunArts] Shūmatsu no Valkyrie (01-12)(1080p) [ESP-ENG][H.264 10Bit AAC][BATCH]">[FunArts] Shūmatsu no Valkyrie (01-12)(1080p) [ESP-ENG][H.264 10Bit AAC][BATCH]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402029.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:a58b24f5fc84c9775bb0c98fb1ad5950b73777d6&amp;dn=%5BFunArts%5D%20Sh%C5%ABmatsu%20no%20Valkyrie%20%2801-12%29%281080p%29%20%5BESP-ENG%5D%5BH.264%2010Bit%20AAC%5D%5BBATCH%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">7.1 GiB</td>
+				<td class="text-center" data-timestamp="1624539824">2021-06-24 13:03</td>
+
+				<td class="text-center">12</td>
+				<td class="text-center">0</td>
+				<td class="text-center">28</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402027" title="[SSA] SD Gundam World Heroes - 12 [480p].mkv">[SSA] SD Gundam World Heroes - 12 [480p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402027.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:453a6345306b4fde5a7a169ea20eda73e2ba62a8&amp;dn=%5BSSA%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%5B480p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">186.2 MiB</td>
+				<td class="text-center" data-timestamp="1624539316">2021-06-24 12:55</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">1</td>
+				<td class="text-center">23</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402026#comments" class="comments" title="2 comments">
+						<i class="fa fa-comments-o"/>2</a>
+					<a href="/view/1402026" title="[ASW] SD Gundam World Heroes - 12 [1080p HEVC x265 10Bit][AAC]">[ASW] SD Gundam World Heroes - 12 [1080p HEVC x265 10Bit][AAC]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402026.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:86eb4410a97597a3d2c7d7ca1c79395f3b9fa3c7&amp;dn=%5BASW%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%5B1080p%20HEVC%20x265%2010Bit%5D%5BAAC%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">639.9 MiB</td>
+				<td class="text-center" data-timestamp="1624537354">2021-06-24 12:22</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">0</td>
+				<td class="text-center">51</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402025" title="[SSA] SD Gundam World Heroes - 12 [720p].mkv">[SSA] SD Gundam World Heroes - 12 [720p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402025.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:231fdbfbd88b00c93de2e41fab0a5d623a5170b0&amp;dn=%5BSSA%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%5B720p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">306.2 MiB</td>
+				<td class="text-center" data-timestamp="1624537090">2021-06-24 12:18</td>
+
+				<td class="text-center">7</td>
+				<td class="text-center">1</td>
+				<td class="text-center">50</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402024" title="[ASW] Maiko-san Chi no Makanai-san - 05 [1080p HEVC x265 10Bit][AAC] (Kiyo in Kyoto - From the Maiko House)">[ASW] Maiko-san Chi no Makanai-san - 05 [1080p HEVC x265 10Bit][AAC] (Kiyo in Kyoto - From the Maiko House)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402024.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:b9a0f02fe3a6487559149efbfc1c363a845864a8&amp;dn=%5BASW%5D%20Maiko-san%20Chi%20no%20Makanai-san%20-%2005%20%5B1080p%20HEVC%20x265%2010Bit%5D%5BAAC%5D%20%28Kiyo%20in%20Kyoto%20-%20From%20the%20Maiko%20House%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">249.7 MiB</td>
+				<td class="text-center" data-timestamp="1624536027">2021-06-24 12:00</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">0</td>
+				<td class="text-center">152</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=2_1" title="Audio - Lossless">
+						<img src="/static/img/icons/nyaa/2_1.png" alt="Audio - Lossless" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402023" title="[2021.06.23] 映画「ショコラの魔法」主題歌「アンバランス」／mzsrz（ミズシラズ）[FLAC 48kHz/24bit]">[2021.06.23] 映画「ショコラの魔法」主題歌「アンバランス」／mzsrz（ミズシラズ）[FLAC 48kHz/24bit]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402023.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:3f681ac85f2cf9666b65ac035795fd11d16d45c0&amp;dn=%5B2021.06.23%5D%20%E6%98%A0%E7%94%BB%E3%80%8C%E3%82%B7%E3%83%A7%E3%82%B3%E3%83%A9%E3%81%AE%E9%AD%94%E6%B3%95%E3%80%8D%E4%B8%BB%E9%A1%8C%E6%AD%8C%E3%80%8C%E3%82%A2%E3%83%B3%E3%83%90%E3%83%A9%E3%83%B3%E3%82%B9%E3%80%8D%EF%BC%8Fmzsrz%EF%BC%88%E3%83%9F%E3%82%BA%E3%82%B7%E3%83%A9%E3%82%BA%EF%BC%89%5BFLAC%2048kHz%2F24bit%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">89.0 MiB</td>
+				<td class="text-center" data-timestamp="1624535653">2021-06-24 11:54</td>
+
+				<td class="text-center">6</td>
+				<td class="text-center">0</td>
+				<td class="text-center">196</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402022" title="[SSA] SD Gundam World Heroes - 12 [1080p].mkv">[SSA] SD Gundam World Heroes - 12 [1080p].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402022.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:159871a1b5deb9f23ab37787974895ebd0bba0fa&amp;dn=%5BSSA%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%5B1080p%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">546.7 MiB</td>
+				<td class="text-center" data-timestamp="1624534204">2021-06-24 11:30</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">31</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_3" title="Literature - Raw">
+						<img src="/static/img/icons/nyaa/3_3.png" alt="Literature - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402021" title="週刊ヤングジャンプ 2021 No.30号 [Weekly Young Jump 2021-30] [comics888]">週刊ヤングジャンプ 2021 No.30号 [Weekly Young Jump 2021-30] [comics888]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402021.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:07a116b95ba051fd071e6d74f5092b986f3c0c07&amp;dn=%E9%80%B1%E5%88%8A%E3%83%A4%E3%83%B3%E3%82%B0%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%202021%20No.30%E5%8F%B7%20%5BWeekly%20Young%20Jump%202021-30%5D%20%5Bcomics888%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">119.4 MiB</td>
+				<td class="text-center" data-timestamp="1624534150">2021-06-24 11:29</td>
+
+				<td class="text-center">67</td>
+				<td class="text-center">1</td>
+				<td class="text-center">4522</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_1" title="Literature - English-translated">
+						<img src="/static/img/icons/nyaa/3_1.png" alt="Literature - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402019#comments" class="comments" title="2 comments">
+						<i class="fa fa-comments-o"/>2</a>
+					<a href="/view/1402019" title="Disney Manga - Tim Burton's The Nightmare Before Christmas (2016) (digital-Empire)">Disney Manga - Tim Burton's The Nightmare Before Christmas (2016) (digital-Empire)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402019.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:35a25cafc386b1af54d740437c66fb7bf70b8997&amp;dn=Disney%20Manga%20-%20Tim%20Burton%27s%20The%20Nightmare%20Before%20Christmas%20%282016%29%20%28digital-Empire%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">272.8 MiB</td>
+				<td class="text-center" data-timestamp="1624533100">2021-06-24 11:11</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">2</td>
+				<td class="text-center">156</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402018#comments" class="comments" title="14 comments">
+						<i class="fa fa-comments-o"/>14</a>
+					<a href="/view/1402018" title="[GST] Shaman King 2021 - 13 [1080p]">[GST] Shaman King 2021 - 13 [1080p]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402018.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:ccad47de0d021f3d382e1abb9eec4169bafd35f8&amp;dn=%5BGST%5D%20Shaman%20King%202021%20-%2013%20%5B1080p%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">448.6 MiB</td>
+				<td class="text-center" data-timestamp="1624532784">2021-06-24 11:06</td>
+
+				<td class="text-center">98</td>
+				<td class="text-center">0</td>
+				<td class="text-center">970</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402017" title="[Ohys-Raws] Nanatsu no Taizai Fundo no Shinpan (TX 1280x720 x264 AAC)">[Ohys-Raws] Nanatsu no Taizai Fundo no Shinpan (TX 1280x720 x264 AAC)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402017.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:509b535b5168ce8e57f9670919d8b6001094592b&amp;dn=%5BOhys-Raws%5D%20Nanatsu%20no%20Taizai%20Fundo%20no%20Shinpan%20%28TX%201280x720%20x264%20AAC%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">7.9 GiB</td>
+				<td class="text-center" data-timestamp="1624532333">2021-06-24 10:58</td>
+
+				<td class="text-center">29</td>
+				<td class="text-center">27</td>
+				<td class="text-center">859</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402016" title="[Ohys-Raws] Cestvs The Roman Fighter (CX 1280x720 x264 AAC)">[Ohys-Raws] Cestvs The Roman Fighter (CX 1280x720 x264 AAC)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402016.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:180ca0dad502862102aa9a358fc4c1ba9f4e57e3&amp;dn=%5BOhys-Raws%5D%20Cestvs%20The%20Roman%20Fighter%20%28CX%201280x720%20x264%20AAC%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">3.2 GiB</td>
+				<td class="text-center" data-timestamp="1624532022">2021-06-24 10:53</td>
+
+				<td class="text-center">34</td>
+				<td class="text-center">8</td>
+				<td class="text-center">865</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402015" title="Godzilla.Singular.Point.S01.MULTi.1080p.NF.WEB-DL.x264-SceneGuardians (VF/VOSTFR)">Godzilla.Singular.Point.S01.MULTi.1080p.NF.WEB-DL.x264-SceneGuardians (VF/VOSTFR)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402015.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:7cffc0ab5ad709cf22725a79b088681086e04c48&amp;dn=Godzilla.Singular.Point.S01.MULTi.1080p.NF.WEB-DL.x264-SceneGuardians%20%28VF%2FVOSTFR%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">9.0 GiB</td>
+				<td class="text-center" data-timestamp="1624531432">2021-06-24 10:43</td>
+
+				<td class="text-center">6</td>
+				<td class="text-center">6</td>
+				<td class="text-center">79</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=2_2" title="Audio - Lossy">
+						<img src="/static/img/icons/nyaa/2_2.png" alt="Audio - Lossy" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402014" title="[TSDM自購][210625]ゾンビランドサガ リベンジ SAGA.1 [Blu-ray] 挿入歌収録特典CD + 特典ラジオCD／フランシュシュ(本渡楓、田野アサミ、種田梨沙、河瀬茉希、衣川里佳、田中美海)[320K]">[TSDM自購][210625]ゾンビランドサガ リベンジ SAGA.1 [Blu-ray] 挿入歌収録特典CD + 特典ラジオCD／フランシュシュ(本渡楓、田野アサミ、種田梨沙、河瀬茉希、衣川里佳、田中美海)[320K]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402014.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:d04dc3fda0004e652e2eebcd2313ef9193f2851c&amp;dn=%5BTSDM%E8%87%AA%E8%B3%BC%5D%5B210625%5D%E3%82%BE%E3%83%B3%E3%83%93%E3%83%A9%E3%83%B3%E3%83%89%E3%82%B5%E3%82%AC%20%E3%83%AA%E3%83%99%E3%83%B3%E3%82%B8%20SAGA.1%20%5BBlu-ray%5D%20%E6%8C%BF%E5%85%A5%E6%AD%8C%E5%8F%8E%E9%8C%B2%E7%89%B9%E5%85%B8CD%20%2B%20%E7%89%B9%E5%85%B8%E3%83%A9%E3%82%B8%E3%82%AACD%EF%BC%8F%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%B7%E3%83%A5%28%E6%9C%AC%E6%B8%A1%E6%A5%93%E3%80%81%E7%94%B0%E9%87%8E%E3%82%A2%E3%82%B5%E3%83%9F%E3%80%81%E7%A8%AE%E7%94%B0%E6%A2%A8%E6%B2%99%E3%80%81%E6%B2%B3%E7%80%AC%E8%8C%89%E5%B8%8C%E3%80%81%E8%A1%A3%E5%B7%9D%E9%87%8C%E4%BD%B3%E3%80%81%E7%94%B0%E4%B8%AD%E7%BE%8E%E6%B5%B7%29%5B320K%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">252.0 MiB</td>
+				<td class="text-center" data-timestamp="1624531048">2021-06-24 10:37</td>
+
+				<td class="text-center">21</td>
+				<td class="text-center">2</td>
+				<td class="text-center">1562</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_1" title="Literature - English-translated">
+						<img src="/static/img/icons/nyaa/3_1.png" alt="Literature - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402012#comments" class="comments" title="2 comments">
+						<i class="fa fa-comments-o"/>2</a>
+					<a href="/view/1402012" title="Neon Genesis Evangelion ANIMA - LN 01-05">Neon Genesis Evangelion ANIMA - LN 01-05</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402012.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:9f8381405059ef981e0b223d1c0d61743fb11fd7&amp;dn=Neon%20Genesis%20Evangelion%20ANIMA%20-%20LN%2001-05&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">77.6 MiB</td>
+				<td class="text-center" data-timestamp="1624529897">2021-06-24 10:18</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">0</td>
+				<td class="text-center">250</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_3" title="Literature - Raw">
+						<img src="/static/img/icons/nyaa/3_3.png" alt="Literature - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402011" title="(一般小説) 究極進化したフルダイブRPGが現実よりもクソゲーだったら 巻3 [Full Dive RPG Vol 3]">(一般小説) 究極進化したフルダイブRPGが現実よりもクソゲーだったら 巻3 [Full Dive RPG Vol 3]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402011.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:9f6d584e81b7905dcf0126c74875149a4004a025&amp;dn=%28%E4%B8%80%E8%88%AC%E5%B0%8F%E8%AA%AC%29%20%E7%A9%B6%E6%A5%B5%E9%80%B2%E5%8C%96%E3%81%97%E3%81%9F%E3%83%95%E3%83%AB%E3%83%80%E3%82%A4%E3%83%96RPG%E3%81%8C%E7%8F%BE%E5%AE%9F%E3%82%88%E3%82%8A%E3%82%82%E3%82%AF%E3%82%BD%E3%82%B2%E3%83%BC%E3%81%A0%E3%81%A3%E3%81%9F%E3%82%89%20%E5%B7%BB3%20%5BFull%20Dive%20RPG%20Vol%203%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.5 MiB</td>
+				<td class="text-center" data-timestamp="1624529658">2021-06-24 10:14</td>
+
+				<td class="text-center">11</td>
+				<td class="text-center">0</td>
+				<td class="text-center">337</td>
+			</tr>
+			<tr class="danger">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402010" title="[YuiSubs] SD Gundam World Heroes - 12  (NVENC H.265 1080p)">[YuiSubs] SD Gundam World Heroes - 12  (NVENC H.265 1080p)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402010.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:659d0fa1004f6d7d51f8703f873169451f7cb846&amp;dn=%5BYuiSubs%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%20%28NVENC%20H.265%201080p%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">440.3 MiB</td>
+				<td class="text-center" data-timestamp="1624529606">2021-06-24 10:13</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">0</td>
+				<td class="text-center">29</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402009#comments" class="comments" title="12 comments">
+						<i class="fa fa-comments-o"/>12</a>
+					<a href="/view/1402009" title="[Hentai-Subs] Dokyuu Hentai HxEros 11 (BDRip 1920x1080 x264 FLAC)">[Hentai-Subs] Dokyuu Hentai HxEros 11 (BDRip 1920x1080 x264 FLAC)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402009.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:17fd8296e9256c2e0c90856e23341037bbb72c24&amp;dn=%5BHentai-Subs%5D%20Dokyuu%20Hentai%20HxEros%2011%20%28BDRip%201920x1080%20x264%20FLAC%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">922.6 MiB</td>
+				<td class="text-center" data-timestamp="1624529548">2021-06-24 10:12</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">0</td>
+				<td class="text-center">94</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402007" title="[PuyaSubs!] SD Gundam World Heroes - 12 [ESP-ENG][720p][DC4E9D75].mkv">[PuyaSubs!] SD Gundam World Heroes - 12 [ESP-ENG][720p][DC4E9D75].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402007.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:18583f8b286417c79cb68e0a1bcb51102d89fe5b&amp;dn=%5BPuyaSubs%21%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%5BESP-ENG%5D%5B720p%5D%5BDC4E9D75%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">709.6 MiB</td>
+				<td class="text-center" data-timestamp="1624529172">2021-06-24 10:06</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">33</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402006" title="[PuyaSubs!] SD Gundam World Heroes - 12 [ESP-ENG][1080p][D28C86BA].mkv">[PuyaSubs!] SD Gundam World Heroes - 12 [ESP-ENG][1080p][D28C86BA].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402006.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:31a8917833002015f3b043b938acebf4381b9fd7&amp;dn=%5BPuyaSubs%21%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%5BESP-ENG%5D%5B1080p%5D%5BD28C86BA%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.4 GiB</td>
+				<td class="text-center" data-timestamp="1624529085">2021-06-24 10:04</td>
+
+				<td class="text-center">4</td>
+				<td class="text-center">0</td>
+				<td class="text-center">31</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402005" title="[Ohys-Raws] Shaman King 2021 - 13 (TX 1280x720 x264 AAC).mp4">[Ohys-Raws] Shaman King 2021 - 13 (TX 1280x720 x264 AAC).mp4</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402005.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:5f864853a77dfec2b0dda55d401f4cea195695e1&amp;dn=%5BOhys-Raws%5D%20Shaman%20King%202021%20-%2013%20%28TX%201280x720%20x264%20AAC%29.mp4&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">290.5 MiB</td>
+				<td class="text-center" data-timestamp="1624529075">2021-06-24 10:04</td>
+
+				<td class="text-center">77</td>
+				<td class="text-center">2</td>
+				<td class="text-center">3408</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402004" title="[SubsPlease] SD Gundam World Heroes - 12 (1080p) [C330E2D3].mkv">[SubsPlease] SD Gundam World Heroes - 12 (1080p) [C330E2D3].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402004.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:95e33b75033b3cf5b39850e3e50cae6acfa52049&amp;dn=%5BSubsPlease%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%281080p%29%20%5BC330E2D3%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.4 GiB</td>
+				<td class="text-center" data-timestamp="1624528917">2021-06-24 10:01</td>
+
+				<td class="text-center">21</td>
+				<td class="text-center">2</td>
+				<td class="text-center">314</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402003" title="[SubsPlease] SD Gundam World Heroes - 12 (720p) [B4D96D53].mkv">[SubsPlease] SD Gundam World Heroes - 12 (720p) [B4D96D53].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402003.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:3bcf265e7d926292de228ab209bf1ba0b80077d5&amp;dn=%5BSubsPlease%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%28720p%29%20%5BB4D96D53%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">715.0 MiB</td>
+				<td class="text-center" data-timestamp="1624528888">2021-06-24 10:01</td>
+
+				<td class="text-center">17</td>
+				<td class="text-center">0</td>
+				<td class="text-center">362</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402002" title="[SubsPlease] SD Gundam World Heroes - 12 (480p) [777DA3FE].mkv">[SubsPlease] SD Gundam World Heroes - 12 (480p) [777DA3FE].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402002.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:f70165d7d56cdf16020c0fc8632faa7457f90a1b&amp;dn=%5BSubsPlease%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%28480p%29%20%5B777DA3FE%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">365.8 MiB</td>
+				<td class="text-center" data-timestamp="1624528873">2021-06-24 10:01</td>
+
+				<td class="text-center">11</td>
+				<td class="text-center">0</td>
+				<td class="text-center">138</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402001" title="[Erai-raws] SD Gundam World Heroes - 12 [1080p][Multiple Subtitle].mkv">[Erai-raws] SD Gundam World Heroes - 12 [1080p][Multiple Subtitle].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402001.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:98f82419c0294d58201f9bd13a555db74815a5dd&amp;dn=%5BErai-raws%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%5B1080p%5D%5BMultiple%20Subtitle%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.4 GiB</td>
+				<td class="text-center" data-timestamp="1624528849">2021-06-24 10:00</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">2</td>
+				<td class="text-center">212</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1402000" title="[Erai-raws] SD Gundam World Heroes - 12 [720p][Multiple Subtitle].mkv">[Erai-raws] SD Gundam World Heroes - 12 [720p][Multiple Subtitle].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1402000.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:dd20a73e6787d7de965e22fb5eb5e7a6a69101e7&amp;dn=%5BErai-raws%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%5B720p%5D%5BMultiple%20Subtitle%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">716.7 MiB</td>
+				<td class="text-center" data-timestamp="1624528841">2021-06-24 10:00</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">0</td>
+				<td class="text-center">269</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401999" title="[Erai-raws] SD Gundam World Heroes - 12 [480p][Multiple Subtitle].mkv">[Erai-raws] SD Gundam World Heroes - 12 [480p][Multiple Subtitle].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401999.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:da827f986ac536f19f5e9e06ee22f196d23b8b2f&amp;dn=%5BErai-raws%5D%20SD%20Gundam%20World%20Heroes%20-%2012%20%5B480p%5D%5BMultiple%20Subtitle%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">367.5 MiB</td>
+				<td class="text-center" data-timestamp="1624528839">2021-06-24 10:00</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">0</td>
+				<td class="text-center">81</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401998#comments" class="comments" title="2 comments">
+						<i class="fa fa-comments-o"/>2</a>
+					<a href="/view/1401998" title="[BDMV] Kengan Ashura (2019)">[BDMV] Kengan Ashura (2019)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401998.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:34018961d00bae4ecf64a17cc83bd1c60d309749&amp;dn=%5BBDMV%5D%20Kengan%20Ashura%20%282019%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">178.0 GiB</td>
+				<td class="text-center" data-timestamp="1624528603">2021-06-24 09:56</td>
+
+				<td class="text-center">3</td>
+				<td class="text-center">12</td>
+				<td class="text-center">29</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=4_4" title="Live Action - Raw">
+						<img src="/static/img/icons/nyaa/4_4.png" alt="Live Action - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401996#comments" class="comments" title="2 comments">
+						<i class="fa fa-comments-o"/>2</a>
+					<a href="/view/1401996" title="[MagicStar] The Naked Director / 全裸監督 S02 [WEBDL] [1080p] [Netflix] [JPN_CHN_SUB]">[MagicStar] The Naked Director / 全裸監督 S02 [WEBDL] [1080p] [Netflix] [JPN_CHN_SUB]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401996.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:2014729690f3ea45632c0f210cdb0803e5e21b7b&amp;dn=%5BMagicStar%5D%20The%20Naked%20Director%20%2F%20%E5%85%A8%E8%A3%B8%E7%9B%A3%E7%9D%A3%20S02%20%5BWEBDL%5D%20%5B1080p%5D%20%5BNetflix%5D%20%5BJPN_CHN_SUB%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">10.4 GiB</td>
+				<td class="text-center" data-timestamp="1624528458">2021-06-24 09:54</td>
+
+				<td class="text-center">71</td>
+				<td class="text-center">25</td>
+				<td class="text-center">2084</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401995#comments" class="comments" title="3 comments">
+						<i class="fa fa-comments-o"/>3</a>
+					<a href="/view/1401995" title="[Senjou] Kiss x Sis (OVA) [BDRip 1920x1080 HEVC FLAC]">[Senjou] Kiss x Sis (OVA) [BDRip 1920x1080 HEVC FLAC]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401995.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:379121c11bcb15a73e9a82594592a1e0978fcbea&amp;dn=%5BSenjou%5D%20Kiss%20x%20Sis%20%28OVA%29%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">14.3 GiB</td>
+				<td class="text-center" data-timestamp="1624528288">2021-06-24 09:51</td>
+
+				<td class="text-center">11</td>
+				<td class="text-center">0</td>
+				<td class="text-center">71</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401994" title="【豌豆字幕组】[七大罪 愤怒的审判 / Nanatsu_no_Taizai_Fundo_no_Shinpan][24][简体][1080P][MP4]">【豌豆字幕组】[七大罪 愤怒的审判 / Nanatsu_no_Taizai_Fundo_no_Shinpan][24][简体][1080P][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401994.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:15506c2686b710ceb38976ed9f21446ca118954b&amp;dn=%E3%80%90%E8%B1%8C%E8%B1%86%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%5B%E4%B8%83%E5%A4%A7%E7%BD%AA%20%E6%84%A4%E6%80%92%E7%9A%84%E5%AE%A1%E5%88%A4%20%2F%20Nanatsu_no_Taizai_Fundo_no_Shinpan%5D%5B24%5D%5B%E7%AE%80%E4%BD%93%5D%5B1080P%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">434.1 MiB</td>
+				<td class="text-center" data-timestamp="1624528257">2021-06-24 09:50</td>
+
+				<td class="text-center">8</td>
+				<td class="text-center">0</td>
+				<td class="text-center">105</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401993" title="【豌豆字幕組】[七大罪 憤怒的審判 / Nanatsu_no_Taizai_Fundo_no_Shinpan][24][繁體][1080P][MP4]">【豌豆字幕組】[七大罪 憤怒的審判 / Nanatsu_no_Taizai_Fundo_no_Shinpan][24][繁體][1080P][MP4]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401993.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:5734c39a4e77e8d1765c8074bbef1e34e1e70f0c&amp;dn=%E3%80%90%E8%B1%8C%E8%B1%86%E5%AD%97%E5%B9%95%E7%B5%84%E3%80%91%5B%E4%B8%83%E5%A4%A7%E7%BD%AA%20%E6%86%A4%E6%80%92%E7%9A%84%E5%AF%A9%E5%88%A4%20%2F%20Nanatsu_no_Taizai_Fundo_no_Shinpan%5D%5B24%5D%5B%E7%B9%81%E9%AB%94%5D%5B1080P%5D%5BMP4%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">433.8 MiB</td>
+				<td class="text-center" data-timestamp="1624528224">2021-06-24 09:50</td>
+
+				<td class="text-center">15</td>
+				<td class="text-center">0</td>
+				<td class="text-center">941</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401992#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1401992" title="[Moozzi2] Kamisama ni Natta Hi (BD 1920x1080 x265-10Bit FLACx3) - TV + Tokuten DVD">[Moozzi2] Kamisama ni Natta Hi (BD 1920x1080 x265-10Bit FLACx3) - TV + Tokuten DVD</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401992.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:1ad58fd40a0d8e57d1d3dff891290022bf73785f&amp;dn=%5BMoozzi2%5D%20Kamisama%20ni%20Natta%20Hi%20%28BD%201920x1080%20x265-10Bit%20FLACx3%29%20-%20TV%20%2B%20Tokuten%20DVD&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">19.3 GiB</td>
+				<td class="text-center" data-timestamp="1624527753">2021-06-24 09:42</td>
+
+				<td class="text-center">20</td>
+				<td class="text-center">19</td>
+				<td class="text-center">404</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401991#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1401991" title="[Moozzi2] Soukou Musume Senki (BD 1920x1080 x265-10Bit Flac) - TV + SP">[Moozzi2] Soukou Musume Senki (BD 1920x1080 x265-10Bit Flac) - TV + SP</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401991.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:8c43011ad40c9e01d76dc17568092efed3b38e22&amp;dn=%5BMoozzi2%5D%20Soukou%20Musume%20Senki%20%28BD%201920x1080%20x265-10Bit%20Flac%29%20-%20TV%20%2B%20SP&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">14.2 GiB</td>
+				<td class="text-center" data-timestamp="1624527747">2021-06-24 09:42</td>
+
+				<td class="text-center">11</td>
+				<td class="text-center">8</td>
+				<td class="text-center">291</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401990#comments" class="comments" title="3 comments">
+						<i class="fa fa-comments-o"/>3</a>
+					<a href="/view/1401990" title="[Moozzi2] Kaifuku Jutsushi no Yarinaoshi (BD 1920x1080 x265-10Bit Flac) - TV + SP">[Moozzi2] Kaifuku Jutsushi no Yarinaoshi (BD 1920x1080 x265-10Bit Flac) - TV + SP</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401990.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:e1489fc69ccf44561049c3594de0d1e68c9ddebc&amp;dn=%5BMoozzi2%5D%20Kaifuku%20Jutsushi%20no%20Yarinaoshi%20%28BD%201920x1080%20x265-10Bit%20Flac%29%20-%20TV%20%2B%20SP&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">9.1 GiB</td>
+				<td class="text-center" data-timestamp="1624527743">2021-06-24 09:42</td>
+
+				<td class="text-center">23</td>
+				<td class="text-center">13</td>
+				<td class="text-center">608</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_4" title="Anime - Raw">
+						<img src="/static/img/icons/nyaa/1_4.png" alt="Anime - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401989" title="[Moozzi2] Idolls! Idol Survival (BD 1920x1080 x265-10Bit Flac) - TV + SP">[Moozzi2] Idolls! Idol Survival (BD 1920x1080 x265-10Bit Flac) - TV + SP</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401989.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:dde8846e0ec2adac5895ba16ae2573152041e0e6&amp;dn=%5BMoozzi2%5D%20Idolls%21%20Idol%20Survival%20%28BD%201920x1080%20x265-10Bit%20Flac%29%20-%20TV%20%2B%20SP&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">4.1 GiB</td>
+				<td class="text-center" data-timestamp="1624527738">2021-06-24 09:42</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">4</td>
+				<td class="text-center">231</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_3" title="Literature - Raw">
+						<img src="/static/img/icons/nyaa/3_3.png" alt="Literature - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401988" title="くま クマ 熊 ベアー 第01-06巻 [Kuma Kuma Kuma Bea vol 01-06]">くま クマ 熊 ベアー 第01-06巻 [Kuma Kuma Kuma Bea vol 01-06]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401988.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:7d9b15748298d204e420c26df43e146cc2443c70&amp;dn=%E3%81%8F%E3%81%BE%20%E3%82%AF%E3%83%9E%20%E7%86%8A%20%E3%83%99%E3%82%A2%E3%83%BC%20%E7%AC%AC01-06%E5%B7%BB%20%5BKuma%20Kuma%20Kuma%20Bea%20vol%2001-06%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">307.0 MiB</td>
+				<td class="text-center" data-timestamp="1624526222">2021-06-24 09:17</td>
+
+				<td class="text-center">47</td>
+				<td class="text-center">1</td>
+				<td class="text-center">3463</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401987" title="[SweetSub][本田小狼與我][Super Cub][12][WebRip][1080P][AVC 8bit][繁日雙語]">[SweetSub][本田小狼與我][Super Cub][12][WebRip][1080P][AVC 8bit][繁日雙語]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401987.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:05a6f3966e95ea467f82579e132da8506a34b3a9&amp;dn=%5BSweetSub%5D%5B%E6%9C%AC%E7%94%B0%E5%B0%8F%E7%8B%BC%E8%88%87%E6%88%91%5D%5BSuper%20Cub%5D%5B12%5D%5BWebRip%5D%5B1080P%5D%5BAVC%208bit%5D%5B%E7%B9%81%E6%97%A5%E9%9B%99%E8%AA%9E%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">518.5 MiB</td>
+				<td class="text-center" data-timestamp="1624525668">2021-06-24 09:07</td>
+
+				<td class="text-center">12</td>
+				<td class="text-center">1</td>
+				<td class="text-center">351</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401986" title="[SweetSub][本田小狼与我][Super Cub][12][WebRip][1080P][AVC 8bit][简日双语]">[SweetSub][本田小狼与我][Super Cub][12][WebRip][1080P][AVC 8bit][简日双语]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401986.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:e1415aaa1148ab9492a8a3b7fa95fe78ac23b2cf&amp;dn=%5BSweetSub%5D%5B%E6%9C%AC%E7%94%B0%E5%B0%8F%E7%8B%BC%E4%B8%8E%E6%88%91%5D%5BSuper%20Cub%5D%5B12%5D%5BWebRip%5D%5B1080P%5D%5BAVC%208bit%5D%5B%E7%AE%80%E6%97%A5%E5%8F%8C%E8%AF%AD%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">518.5 MiB</td>
+				<td class="text-center" data-timestamp="1624525657">2021-06-24 09:07</td>
+
+				<td class="text-center">16</td>
+				<td class="text-center">1</td>
+				<td class="text-center">222</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401985#comments" class="comments" title="4 comments">
+						<i class="fa fa-comments-o"/>4</a>
+					<a href="/view/1401985" title="[Senjou] Log Horizon 2 [BDrip 1920x1080 x264 FLAC]">[Senjou] Log Horizon 2 [BDrip 1920x1080 x264 FLAC]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401985.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:2f968a3c421b6aacf4a9812e56445bfd1691e3b3&amp;dn=%5BSenjou%5D%20Log%20Horizon%202%20%5BBDrip%201920x1080%20x264%20FLAC%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">64.3 GiB</td>
+				<td class="text-center" data-timestamp="1624525238">2021-06-24 09:00</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">0</td>
+				<td class="text-center">23</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_2" title="Anime - English-translated">
+						<img src="/static/img/icons/nyaa/1_2.png" alt="Anime - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401984#comments" class="comments" title="5 comments">
+						<i class="fa fa-comments-o"/>5</a>
+					<a href="/view/1401984" title="[FLFL] Monogatari Series Second Season [BDRip 1920x1080 HEVC FLAC]">[FLFL] Monogatari Series Second Season [BDRip 1920x1080 HEVC FLAC]</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401984.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:6f000b448395faa02dab3cde049246c60c2d9b87&amp;dn=%5BFLFL%5D%20Monogatari%20Series%20Second%20Season%20%5BBDRip%201920x1080%20HEVC%20FLAC%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">32.6 GiB</td>
+				<td class="text-center" data-timestamp="1624524928">2021-06-24 08:55</td>
+
+				<td class="text-center">10</td>
+				<td class="text-center">5</td>
+				<td class="text-center">34</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_1" title="Literature - English-translated">
+						<img src="/static/img/icons/nyaa/3_1.png" alt="Literature - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401983#comments" class="comments" title="3 comments">
+						<i class="fa fa-comments-o"/>3</a>
+					<a href="/view/1401983" title="The Case Study of Vanitas 052 (2021) (Digital) (LuCaZ)">The Case Study of Vanitas 052 (2021) (Digital) (LuCaZ)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401983.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:e9efdf78e24af6a01dec9fd66b71ccf08ca27bca&amp;dn=The%20Case%20Study%20of%20Vanitas%20052%20%282021%29%20%28Digital%29%20%28LuCaZ%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">13.8 MiB</td>
+				<td class="text-center" data-timestamp="1624524130">2021-06-24 08:42</td>
+
+				<td class="text-center">7</td>
+				<td class="text-center">0</td>
+				<td class="text-center">109</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=3_1" title="Literature - English-translated">
+						<img src="/static/img/icons/nyaa/3_1.png" alt="Literature - English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401982" title="Dead Mount Death Play 067 (2021) (Digital) (LuCaZ)">Dead Mount Death Play 067 (2021) (Digital) (LuCaZ)</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401982.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:7358839dfb361bf88660b7a741fc50beeab449dc&amp;dn=Dead%20Mount%20Death%20Play%20067%20%282021%29%20%28Digital%29%20%28LuCaZ%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">11.8 MiB</td>
+				<td class="text-center" data-timestamp="1624524126">2021-06-24 08:42</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">1</td>
+				<td class="text-center">86</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=4_4" title="Live Action - Raw">
+						<img src="/static/img/icons/nyaa/4_4.png" alt="Live Action - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401981#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1401981" title="Mashin Sentai Kiramager - The Movie [Be-Bop Dream][WEB-DL][1080p][1E1B088D].mkv">Mashin Sentai Kiramager - The Movie [Be-Bop Dream][WEB-DL][1080p][1E1B088D].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401981.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:35dc940a75d94efba3ee835e4ef463558137f25b&amp;dn=Mashin%20Sentai%20Kiramager%20-%20The%20Movie%20%5BBe-Bop%20Dream%5D%5BWEB-DL%5D%5B1080p%5D%5B1E1B088D%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">3.4 GiB</td>
+				<td class="text-center" data-timestamp="1624523961">2021-06-24 08:39</td>
+
+				<td class="text-center">13</td>
+				<td class="text-center">1</td>
+				<td class="text-center">279</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=4_4" title="Live Action - Raw">
+						<img src="/static/img/icons/nyaa/4_4.png" alt="Live Action - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401980" title="Mashin Sentai Kiramager - The Movie [Be-Bop Dream][WEB-DL][720p][CD407A53].mkv">Mashin Sentai Kiramager - The Movie [Be-Bop Dream][WEB-DL][720p][CD407A53].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401980.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:814075956635a73cc4137e31a371530178d1c141&amp;dn=Mashin%20Sentai%20Kiramager%20-%20The%20Movie%20%5BBe-Bop%20Dream%5D%5BWEB-DL%5D%5B720p%5D%5BCD407A53%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">972.8 MiB</td>
+				<td class="text-center" data-timestamp="1624523957">2021-06-24 08:39</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">0</td>
+				<td class="text-center">213</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401979" title="【幻櫻字幕組】【4月新番】【致不滅的你 / 給不滅的你 Fumetsu no Anata e】【10】【BIG5_MP4】【1280X720】">【幻櫻字幕組】【4月新番】【致不滅的你 / 給不滅的你 Fumetsu no Anata e】【10】【BIG5_MP4】【1280X720】</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401979.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:3fec70675c05cd4fef0ecfe336d6a3789ece3c0f&amp;dn=%E3%80%90%E5%B9%BB%E6%AB%BB%E5%AD%97%E5%B9%95%E7%B5%84%E3%80%91%E3%80%904%E6%9C%88%E6%96%B0%E7%95%AA%E3%80%91%E3%80%90%E8%87%B4%E4%B8%8D%E6%BB%85%E7%9A%84%E4%BD%A0%20%2F%20%E7%B5%A6%E4%B8%8D%E6%BB%85%E7%9A%84%E4%BD%A0%20Fumetsu%20no%20Anata%20e%E3%80%91%E3%80%9010%E3%80%91%E3%80%90BIG5_MP4%E3%80%91%E3%80%901280X720%E3%80%91&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">170.9 MiB</td>
+				<td class="text-center" data-timestamp="1624523262">2021-06-24 08:27</td>
+
+				<td class="text-center">4</td>
+				<td class="text-center">0</td>
+				<td class="text-center">237</td>
+			</tr>
+			<tr class="default">
+				<td>
+					<a href="/?c=1_3" title="Anime - Non-English-translated">
+						<img src="/static/img/icons/nyaa/1_3.png" alt="Anime - Non-English-translated" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401978" title="【幻樱字幕组】【4月新番】【致不灭的你 / 给不灭的你 Fumetsu no Anata e】【10】【GB_MP4】【1280X720】">【幻樱字幕组】【4月新番】【致不灭的你 / 给不灭的你 Fumetsu no Anata e】【10】【GB_MP4】【1280X720】</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401978.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:c9a2948210ab57b3620a134e1ddf813aa0fbb6ad&amp;dn=%E3%80%90%E5%B9%BB%E6%A8%B1%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E3%80%904%E6%9C%88%E6%96%B0%E7%95%AA%E3%80%91%E3%80%90%E8%87%B4%E4%B8%8D%E7%81%AD%E7%9A%84%E4%BD%A0%20%2F%20%E7%BB%99%E4%B8%8D%E7%81%AD%E7%9A%84%E4%BD%A0%20Fumetsu%20no%20Anata%20e%E3%80%91%E3%80%9010%E3%80%91%E3%80%90GB_MP4%E3%80%91%E3%80%901280X720%E3%80%91&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">170.9 MiB</td>
+				<td class="text-center" data-timestamp="1624523258">2021-06-24 08:27</td>
+
+				<td class="text-center">2</td>
+				<td class="text-center">0</td>
+				<td class="text-center">92</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=4_4" title="Live Action - Raw">
+						<img src="/static/img/icons/nyaa/4_4.png" alt="Live Action - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401977#comments" class="comments" title="1 comment">
+						<i class="fa fa-comments-o"/>1</a>
+					<a href="/view/1401977" title="Kishiryu Sentai Ryusoulger Special [Memory of Soulmates][WEB-DL][1080p][0E74D4E7].mkv">Kishiryu Sentai Ryusoulger Special [Memory of Soulmates][WEB-DL][1080p][0E74D4E7].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401977.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:2f7ee4b57e213f643ae4aa3fc3610047d8eb1474&amp;dn=Kishiryu%20Sentai%20Ryusoulger%20Special%20%5BMemory%20of%20Soulmates%5D%5BWEB-DL%5D%5B1080p%5D%5B0E74D4E7%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">1.3 GiB</td>
+				<td class="text-center" data-timestamp="1624523216">2021-06-24 08:26</td>
+
+				<td class="text-center">15</td>
+				<td class="text-center">0</td>
+				<td class="text-center">257</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<a href="/?c=4_4" title="Live Action - Raw">
+						<img src="/static/img/icons/nyaa/4_4.png" alt="Live Action - Raw" class="category-icon"/>
+					</a>
+				</td>
+				<td colspan="2">
+					<a href="/view/1401976" title="Kishiryu Sentai Ryusoulger Special [Memory of Soulmates][WEB-DL][720p][43D42760].mkv">Kishiryu Sentai Ryusoulger Special [Memory of Soulmates][WEB-DL][720p][43D42760].mkv</a>
+				</td>
+				<td class="text-center">
+					<a href="/download/1401976.torrent"><i class="fa fa-fw fa-download"/></a>
+					<a href="magnet:?xt=urn:btih:d7ab6cbfde4a156c9036bf4a1b3ef3f6149d39d0&amp;dn=Kishiryu%20Sentai%20Ryusoulger%20Special%20%5BMemory%20of%20Soulmates%5D%5BWEB-DL%5D%5B720p%5D%5B43D42760%5D.mkv&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce"><i class="fa fa-fw fa-magnet"/></a>
+				</td>
+				<td class="text-center">354.3 MiB</td>
+				<td class="text-center" data-timestamp="1624523211">2021-06-24 08:26</td>
+
+				<td class="text-center">5</td>
+				<td class="text-center">0</td>
+				<td class="text-center">205</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="center">
+	<nav>
+  <ul class="pagination">
+    <li><a rel="prev" href="/?p=49">«</a></li>
+        <li><a href="/?p=1">1</a></li>
+        <li><a href="/?p=2">2</a></li>
+      <li class="disabled"><a href="#">…</a></li>
+        <li><a href="/?p=44">44</a></li>
+        <li><a href="/?p=45">45</a></li>
+        <li><a href="/?p=46">46</a></li>
+        <li><a href="/?p=47">47</a></li>
+        <li><a href="/?p=48">48</a></li>
+        <li><a href="/?p=49">49</a></li>
+        <li class="active"><a href="#">50 <span class="sr-only">(current)</span></a></li>
+        <li><a href="/?p=51">51</a></li>
+        <li><a href="/?p=52">52</a></li>
+        <li><a href="/?p=53">53</a></li>
+        <li><a href="/?p=54">54</a></li>
+        <li><a href="/?p=55">55</a></li>
+
+    <li><a rel="next" href="/?p=51">»</a></li>
+</ul>
+</nav>
+
+</div>
+		</div> <!-- /container -->
+
+		<footer style="text-align: center;">
+			<p>Dark Mode: <a href="#" id="themeToggle">Toggle</a></p>
+		</footer>
+	</body>
